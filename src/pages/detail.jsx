@@ -49,8 +49,8 @@ export default function Detail() {
                 <ul>
                     <li><Link className="text-decoration-none color-dark font-500" to="/">Home</Link></li>
                     <li className="separator"><FaAnglesRight className="color-dark" /></li>
-                    <li>{content?.author?.name || "Unknown Author"}</li>
-                    <li className="separator"><FaAnglesRight className="color-dark" /></li>
+                    {/* <li>{content?.author?. || "Unknown Author"}</li> */}
+                    {/* <li className="separator"><FaAnglesRight className="color-dark" /></li> */}
                     <li>{content?.title || "Loading..."}</li>
                 </ul>
                 </div>

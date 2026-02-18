@@ -46,7 +46,7 @@
 .navbar  .account-identity {
     position: absolute;
     right: 20px;
-    top: 25px;
+    top: 23px;
     font-size: 13px;
     color: #333;
     font-weight: 500;
@@ -71,11 +71,37 @@
     border: 1px solid #ccc;
 }
 
+.navbar .navbar-menu {
+    /* border: 1px solid red; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 600px) {
     .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        height: auto;
+        /* flex-direction: column; */
+        /* align-items: flex-start; */
+        /* height: auto; */
         /* background-color: rgb(22, 22, 22); */
         /* background-color: #252525; */
         background-color: rgb(243, 241, 241);
@@ -83,17 +109,21 @@
         padding-bottom: 20px;
         /* box-shadow: #333 0px 2px 4px, #333 0px 4px 8px;
         border: none; */
+        display: block;
         border: none;
         margin: 0;
-        padding: 0;
+        padding: 4px;
+        position: relative;
         /* border: 1px solid red; */
+        min-height: 100px;
+        z-index: 50;
     }
 
     .navbar .btn-menu {
     display: inline-block;
     /* border : 1px solid red; */
     position: absolute;
-    z-index: 10;
+    z-index: 100;
     right:10px;
     font-size: 25px;
     color: black;
@@ -113,8 +143,9 @@
         margin-right: 0;
         margin-bottom: 10px;
         color: rgb(20, 20, 20);
-        font-size: 18px;
+        font-size: 16px;
         padding: 10px;
+        /* border: 1px solid rgb(69, 207, 35); */
     }
 
     .navbar .menu {
@@ -122,14 +153,46 @@
         flex-direction: column;
         gap: 10px;
         /* border: 1px solid red; */
-        display: none;
+        /* display: none; */
+        /* opacity: 0; */
+        /* translate: 0 -100%; */
+        /* transform: translateY(-187%); */
+        /* transition: all 0.8s ease; */
         /* background-color: #333; */
         width: 100%;
+        /* min-height: 50vh; */
         padding: 5px;
         padding-top: 15px;
         padding-bottom: 15px;
         border-bottom: 1px solid gainsboro;
+        position: relative;
+        background-color: white;
+        margin: 0;
+
     }
+
+    .navbar .navbar-menu {
+        /* display: none; */
+        background: none;
+        width: 100%;
+        /* position: absolute; */
+        /* display: flex; */
+        opacity: 0;
+         transform: translateY(-187%);
+         transition: all 0.8s ease;
+         /* border: 1px solid red; */
+        /* border: 1px solid red; */
+        /* height: 50vh; */
+        transform: translateY(-180%);
+        transition: all 0.8s ease;
+
+        position: absolute;
+        /* top: 100%; */
+        /* left: 0; */
+        /* width: 100%; */
+        /* background-color: #333; */
+        /* padding: 10px; */
+    }   
 
     .navbar .menu .datalink {
         font-size: 14px;
@@ -140,12 +203,28 @@
     }
 
     .navbar .account-identity {
-        display: none;
+        /* display: none; */
         /* background-color: rgba(125, 212, 241, 0.648); */
-        width: 100%;
+        /* width: 100%; */
+        /* display: block; */
         padding: 15px;
         margin: 0;
+        display: block;
+        border-bottom: none;
+        background-color: white;
+        width: 100%;
+        /* opacity: 0; */
+        /* transform: translateY(-187%); */
+        /* transition: all 0.8s ease; */
         /* border: 1px solid red; */
+        position: relative;
+        /* z-index: 50; */
+        /* border: 1px solid rgb(0, 166, 255); */
+        /* position: relative !important; */
+        /* display: inline-block; */
+        right: 0;
+        top: 0;
+        /* bottom: -40px; */
     }
 
     .navbar .account-identity .datalink-login {
@@ -156,5 +235,9 @@
 }
 
 .navbar-show {
-    display: flex !important;
+    /* display: flex !important; */
+     transform: translateX(0) !important;
+     opacity: 1 !important;
+     position: relative !important;
+     width: 100% !important;
 }

@@ -31,7 +31,10 @@ export default function Home() {
   console.log(contents.data);
 
   return (
-    <div className="page-news">
+    <div className="page-home">
+      <div className="page-title">
+        <h1 className="text-capitalizer">Latest News</h1>
+      </div>
       <div className="container-box">
         
         {contents.data.map(content => (
