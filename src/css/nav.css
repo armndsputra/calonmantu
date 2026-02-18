@@ -1,37 +1,49 @@
 
 
-nav {
+.navbar {
     /* background-color: red; */
     display: flex;
     position: relative;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #cccccc85;
     padding: 20px;
     padding-bottom: 10px;
 }
 
-nav .title-weblogid {
+.navbar .btn-menu {
+    display: none;
+}
+
+.navbar .title-weblogid {
     font-size: 12px;
     font-weight: bold;
     color: #333;
     /* margin-bottom: 20px; */
     margin-right: 50px;
+    /* text-transform: uppercase; */
+    text-transform: capitalize;
+    /* border: 1px solid red; */
 }
 
-nav .menu {
+/* .navbar .title-weblogid .web-name img {
+    width: 130px;
+} */
+
+
+.navbar .menu {
     display: flex;
     gap: 15px;
     /* margin-bottom: 30px; */
     padding: 3px;
 }
 
-nav .menu .datalink {
+.navbar .menu .datalink {
     text-decoration: none;
     color: #353638;
     font-weight: 500;
     font-size: 13px;
 }
 
-nav  .account-identity {
+.navbar  .account-identity {
     position: absolute;
     right: 20px;
     top: 25px;
@@ -40,7 +52,7 @@ nav  .account-identity {
     font-weight: 500;
 }
 
-nav  .account-identity .datalink-login {
+.navbar  .account-identity .datalink-login {
     text-decoration: none;
     color: #353638;
     font-weight: 500;
@@ -48,7 +60,7 @@ nav  .account-identity .datalink-login {
     margin-right: 10px;
 }
 
-nav  .account-identity .datalink-signup {
+.navbar  .account-identity .datalink-signup {
     text-decoration: none;
     color: #353638;
     font-weight: 500;
@@ -60,41 +72,89 @@ nav  .account-identity .datalink-signup {
 }
 
 @media screen and (max-width: 600px) {
-    nav {
+    .navbar {
         flex-direction: column;
         align-items: flex-start;
         height: auto;
         /* background-color: rgb(22, 22, 22); */
-        background-color: #252525;
+        /* background-color: #252525; */
+        background-color: rgb(243, 241, 241);
         color: white;
         padding-bottom: 20px;
         /* box-shadow: #333 0px 2px 4px, #333 0px 4px 8px;
         border: none; */
+        border: none;
+        margin: 0;
+        padding: 0;
+        /* border: 1px solid red; */
     }
 
-    nav .account-identity {
+    .navbar .btn-menu {
+    display: inline-block;
+    /* border : 1px solid red; */
+    position: absolute;
+    z-index: 10;
+    right:10px;
+    font-size: 25px;
+    color: black;
+    cursor: pointer;
+    /* background-color: #333; */
+    padding: 10px;
+}
+
+
+    .navbar .account-identity {
         position: static;
         margin-top: 10px;
+        border-bottom: 1px solid gainsboro;
     }
 
-    nav .title-weblogid {
+    .navbar .title-weblogid {
         margin-right: 0;
         margin-bottom: 10px;
-        color: white;
-        font-size: 20px;
+        color: rgb(20, 20, 20);
+        font-size: 18px;
+        padding: 10px;
     }
 
-    nav .menu {
+    .navbar .menu {
+        
         flex-direction: column;
         gap: 10px;
+        /* border: 1px solid red; */
+        display: none;
+        /* background-color: #333; */
+        width: 100%;
+        padding: 5px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid gainsboro;
     }
 
-    nav .menu .datalink {
+    .navbar .menu .datalink {
         font-size: 14px;
-        color: white;
+        color: rgb(32, 31, 31);
+        margin-left: 10px;
+        /* padding: 14px 0; */
+        /* margin: 0; */
     }
 
-    nav .account-identity .datalink-login {
-        color: white;
+    .navbar .account-identity {
+        display: none;
+        /* background-color: rgba(125, 212, 241, 0.648); */
+        width: 100%;
+        padding: 15px;
+        margin: 0;
+        /* border: 1px solid red; */
     }
+
+    .navbar .account-identity .datalink-login {
+        color: rgb(22, 21, 21);
+        /* border: 1px solid red; */
+        margin-top: 6px;
+    }
+}
+
+.navbar-show {
+    display: flex !important;
 }

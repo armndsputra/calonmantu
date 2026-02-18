@@ -84,7 +84,7 @@
         /* flex-direction: column; */
         display: block;
         width: 100%;
-        padding: 10px;
+        padding: 0px;
     }
     .page-detail {
         width: 100%;
@@ -98,6 +98,7 @@
     }
 
     .container-detail .page-detail .post-data {
-        font-size: 12px;
+        font-size: 9px;
+        /* display: block; */
     }
 }

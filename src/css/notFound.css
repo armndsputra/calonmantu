@@ -8,8 +8,9 @@
 }
 
 .page-not-found h1 {
-    font-size: 3rem;
+    font-size: 1rem;
     color: #333;
+    text-align: center;
 }
 
 .page-not-found img {

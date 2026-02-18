@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"
 
 import { FaAnglesRight } from "react-icons/fa6";
 
-import Loading from "../assets/loading.gif"
+import Loading from "../assets/Loading.gif"
 
 export default function Detail() {
  
