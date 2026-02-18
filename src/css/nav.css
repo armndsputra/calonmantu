@@ -46,7 +46,7 @@
 .navbar  .account-identity {
     position: absolute;
     right: 20px;
-    top: 23px;
+    top: 0;
     font-size: 13px;
     color: #333;
     font-weight: 500;
@@ -73,6 +73,8 @@
 
 .navbar .navbar-menu {
     /* border: 1px solid red; */
+    width: 100%;
+    position: relative;
 }
 
 
@@ -98,6 +100,14 @@
 
 
 @media screen and (max-width: 600px) {
+    .navbar-show {
+    /* display: flex !important; */
+     transform: translateX(0) !important;
+     opacity: 1 !important;
+     position: relative !important;
+     width: 100% ;
+}
+
     .navbar {
         /* flex-direction: column; */
         /* align-items: flex-start; */
