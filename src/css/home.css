@@ -93,10 +93,15 @@
 
 @media screen and (max-width: 600px) {
 
+  .page-home {
+    padding: 0px;
+  }
     .container-box {
         /* display: block; */
         /* border: 1px solid #ccc; */
         display: block;
+        padding: 0;
+        margin: 0;
     }
 
   .container-box .box {
@@ -107,6 +112,6 @@
   }
 
   .container-box .box img {
-    height: auto;
+    height: 200px;
   }
 }
