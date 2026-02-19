@@ -4,7 +4,7 @@
     /* background-color: red; */
     display: flex;
     position: relative;
-    border-bottom: 1px solid #cccccc85;
+    /* border-bottom: 1px solid #cccccc85; */
     padding: 20px;
     padding-bottom: 10px;
 }
@@ -37,16 +37,34 @@
 
 .navbar .menu {
     display: flex;
-    gap: 15px;
+    gap: 20px;
     /* margin-bottom: 30px; */
-    padding: 3px;
+    /* padding: 3px; */
+    /* border: 1px solid red; */
+    position: relative;
+}
+
+.navbar .navbar-menu {
+    /* border: 1px solid red; */
+    width: 100%;
+    position: relative;
+    margin-top: 15px;
 }
 
 .navbar .menu .datalink {
     text-decoration: none;
     color: #353638;
-    font-weight: 500;
-    font-size: 16px;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.navbar .menu .datalink:hover {
+    color: #dc8307;
+    transition: all 0.3s ease;
+    background-color: #e0e0e0;
+    padding: 4px 10px;
+    border-radius: 10px;
 }
 
 .navbar  .account-identity {
@@ -77,11 +95,7 @@
     border: 1px solid #ccc;
 }
 
-.navbar .navbar-menu {
-    /* border: 1px solid red; */
-    width: 100%;
-    position: relative;
-}
+
 
 
 

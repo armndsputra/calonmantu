@@ -1,9 +1,109 @@
 .container-about {
-    width: 1000px;
+    /* width: 1000px; */
     margin: auto;
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    position: relative;
+    padding: 0;
 }
 
-.container-about h3 {
+.container-about p {
+    text-align: justify;
+}
+
+.container-about .about-image {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.container-about .about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container-about .about-description {
+    max-width: 600px;
+    margin: auto;
+    /* position: absolute; */
+    position: relative;
+    
+}
+
+.container-about .about-description h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.container-about .about-description h3::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #f9c716;
+    margin-top: 5px;
+}
+
+.container-about .about-description p {
+    font-size: 18px;
+    /* border-left: 2px solid #f9c716; */
+    /* padding-left: 10px; */
+}
+
+.container-about .about-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    width: 1000px;
+    margin: auto;
+    padding-top: 40px;
+}
+
+.container-about .about-content .medsos {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    font-size: 50px;
+}
+
+.container-about .about-content .medsos a {
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.container-about .album {
+    margin-top: 50px;
+    /* border: 1px solid red; */
+    height: 200px;
+    /* background-color: #f0f0f0; */
+    background-color: white;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .container-about {
+        width: 100%;
+        /* border: 1px solid red; */
+    }
+
+    .container-about .about-content {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        padding: 30px;
+    }
+
+    .about-content .about-image {
+        width: 250px;
+        height: 250px;
+        /* text-align: center; */
+        /* border: 1px solid red; */
+    }
     
 }

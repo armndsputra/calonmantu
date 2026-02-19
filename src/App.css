@@ -16,7 +16,7 @@ body {
 }
 
 .body-area {
-    padding: 20px;
+    /* padding: 20px; */
     border-top: 1px solid #dddddd2f;
     min-height: 100vh;
 }
@@ -62,5 +62,9 @@ body {
     
     .color-white {
         color: #fff;
+    }
+
+    .body-area {
+        padding: 20px;
     }
 }

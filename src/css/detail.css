@@ -11,13 +11,14 @@
     border-right: 1px solid #ccc;
     min-height: 100vh;
     position:  relative;
+    /* border: 1px solid red; */
 }
 
 .container-detail .page-detail .breadcrumb {
     /* margin-bottom: 20px; */
     /* border: 1px solid #da1c1c; */
     position: absolute;
-    top: -25px;
+    top: -10px;
     left: 4px;
     font-size: 12px;
     border-bottom: 1px solid #ccc;
@@ -43,6 +44,7 @@
     text-align: center;
     text-transform: capitalize;
     letter-spacing: 1px;
+    margin-top: 30px;
 }
 
 .container-detail .page-detail .post-data {
