@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-import Calonmant from '../assets/calonmantu.png'
+import O from '../assets/1.png'
 import { FaBars } from "react-icons/fa6";
 
 import { useState, useEffect } from 'react';
@@ -36,7 +36,7 @@ export default function Nav() {
                 {/* <Link className='web-name'>
                     <img src={Calonmant} alt="" />
                 </Link> */}
-                <Link className='color-dark text-decoration-none color-dark' to="/">Calonmantu.</Link>
+                <Link className='color-dark text-decoration-none color-dark web-name' to="/">Cal <img src={O} alt="" />nmantu</Link>
                 </h2>
         </div>
         <div className={`navbar-menu ${isCss}`}>
@@ -50,6 +50,7 @@ export default function Nav() {
                 <Link className='datalink-login' to="/login">Log in</Link>
                 <Link className='datalink-signup' to="/signup">Sign up</Link>
             </div>
+            {/* <div className='divider'></div> */}
         </div>
     </div>
   )

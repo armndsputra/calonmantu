@@ -6,6 +6,7 @@ import './css/home.css'
 import './css/footer.css'
 import './css/detail.css'
 import './css/notFound.css'
+import './css/about.css'
 
 // components
 import Nav from './components/nav.jsx'
@@ -17,6 +18,7 @@ import Footer from './components/footer.jsx'
 import Home from './pages/home.jsx'
 import Detail from './pages/detail.jsx'
 import NotFound from './pages/notFound.jsx'
+import About from './pages/about.jsx'
 
 function App() {
 
@@ -29,7 +31,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/detail/:id" element={<Detail />} />
 
-        <Route path="/images" element={<h1>Images Page</h1>} />
+        <Route path="/about" element={<About/>}/>
         <Route path="/projects" element={<h1>Projects Page</h1>} />
 
         <Route path="*" element={<NotFound />} />
