@@ -87,6 +87,8 @@
         display: block;
         width: 100%;
         padding: 0px;
+        /* margin: 0; */
+        /* border: 1px solid red; */
     }
     .page-detail {
         width: 100%;
