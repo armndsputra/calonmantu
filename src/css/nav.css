@@ -42,6 +42,7 @@
         /* border: 1px solid red; */
         display: inline-block;
         width: 300px;
+        text-transform: capitalize;
         /* text-transform: uppercase; */
         font-family: "Playwrite NZ Basic", cursive;
         /* color: white; */
@@ -170,10 +171,14 @@
         border: none;
         margin: 0;
         padding: 4px;
-        position: relative;
+        /* position: relative; */
+        position: fixed;
         /* border: 1px solid red; */
         min-height: 100px;
         z-index: 50;
+        /* border: 1px solid red; */
+        /* background: transparent; */
+        background-color: rgb(20, 20, 20);
     }
 
     .navbar .btn-menu {
@@ -183,7 +188,7 @@
     z-index: 100;
     right:10px;
     font-size: 25px;
-    color: black;
+    color: rgb(244, 241, 241);
     cursor: pointer;
     /* background-color: #333; */
     padding: 10px;
@@ -228,11 +233,15 @@
 
     }
 
+    .navbar .title-weblogid .web-name {
+       color: white;
+    }
+
     .navbar .navbar-menu {
         /* display: none; */
         background: none;
         width: 100%;
-        height: 50vh;
+        height: 40vh;
         /* position: absolute; */
         /* display: flex; */
         opacity: 0;
@@ -244,7 +253,7 @@
         transform: translateY(-180%);
         transition: all 0.8s ease;
 
-        position: absolute;
+        position: fixed;
         z-index: 30;
         top: 0;
         /* top: 100%; */
@@ -261,7 +270,14 @@
         margin-left: 10px;
         /* padding: 14px 0; */
         /* margin: 0; */
-        padding: 0;
+        padding: 4px 10px;
+    }
+
+    .navbar .menu .datalink:hover {
+        background-color: transparent;
+        /* border-bottom: 2px solid #dc8307; */
+        border: none;
+        color: #dc8307;
     }
 
     .navbar .account-identity {
@@ -281,6 +297,7 @@
         /* border: 1px solid red; */
         position: relative;
         /* z-index: 50; */
+        text-align: right;
         /* border: 1px solid rgb(0, 166, 255); */
         /* position: relative !important; */
         /* display: inline-block; */
@@ -296,7 +313,7 @@
         height: 2px;
         background-color: #dc8307;
         margin-top: 15px;
-
+        right: 0;
     }
 
     .navbar .account-identity .datalink-login {

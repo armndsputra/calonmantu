@@ -21,7 +21,9 @@ body {
     /* padding: 20px; */
     border-top: 1px solid #dddddd2f;
     min-height: 100vh;
+    /* border: 1px solid #0ee251e3; */
     /* margin-top: 200px; */
+    padding: 0;
 }
 
 .loading-container {
@@ -31,7 +33,7 @@ body {
     height: 100vh;
     z-index: 100;
     margin: auto;
-    /* border: 1px solid red; */
+    /* border: 1px solid rgb(8, 214, 59); */
     text-align: center;
 }
 
@@ -68,6 +70,6 @@ body {
     }
 
     .body-area {
-        padding: 20px;
+        padding: 0px;
     }
 }

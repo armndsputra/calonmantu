@@ -2,6 +2,7 @@ import user from '../assets/634469017_2112247306243469_3073043294671796415_n.jpg
 
 import { FaSquareFacebook } from "react-icons/fa6";
 import { FaSquareGit } from "react-icons/fa6";
+import { FaSquareInstagram } from "react-icons/fa6";
 
 export default function about () {
 
@@ -13,11 +14,19 @@ export default function about () {
             <div className="about-description">
                 <h3>About Me</h3><br />
                 
-                <p>Hi, kamu yang sudah datang ke Web BLOG calonmantu. Saya <span className='font-500'>Trisna</span> pemuda kampung asal Kota Yogyakarta yang tertarik mempelajari Teknologi. Penyuka Musik, Film dan sesuatu yang menantang. Web BLOG ini juga sebagai tempat untuk berbagi pengalaman dan pengetahuan yang saya pelajari. Untuk kontak silahkan hubungi saya via media sosial</p>
+                <p>
+                <div className='font-500'>Halo! Saya Trisna</div><br />
+
+                Seorang pemuda asal <span className='font-500'>Yogyakarta</span> yang antusias terhadap perkembangan teknologi. Di sela-sela menikmati musik, film, dan beratnya kehidupan, saya menuangkan pemikiran serta pengalaman ke dalam tulisan.
+                <br /><br />
+                Blog ini adalah ruang bagi saya untuk berbagi pengetahuan dan cerita seputar dunia teknologi, serta hal-hal menarik lainnya yang saya pelajari dalam perjalanan sebagai life-long learner.
+                <br />
+                Mari terhubung! Temukan saya di media sosial melalui tautan di bawah. 👇</p>
                 <div className='medsos'>
                     <a href="https://www.facebook.com/trisna.armandasaputra" target="_blank" rel="noopener noreferrer"><FaSquareFacebook /></a>
                     <a href="https://github.com/armndsputra" target="_blank" rel="noopener noreferrer"><FaSquareGit /></a>
                     
+                    <a href="https://www.instagram.com/armndsputra/" target="_blank" rel="noopener noreferrer"><FaSquareInstagram /></a>
                 </div>
             </div>
         </div>

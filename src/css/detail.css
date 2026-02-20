@@ -86,7 +86,7 @@
         /* flex-direction: column; */
         display: block;
         width: 100%;
-        padding: 0px;
+        padding: 12px;
         /* margin: 0; */
         /* border: 1px solid red; */
     }
@@ -94,6 +94,7 @@
         width: 100%;
         border-right: none;
         padding: 4px;
+        margin-top: 10px;
     }
 
     .container-detail h1 {

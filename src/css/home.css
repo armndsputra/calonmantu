@@ -91,10 +91,18 @@
   text-transform: capitalize;
 }
 
+
+
+
+
+
+
+
+
 @media screen and (max-width: 600px) {
 
   .page-home {
-    padding: 0px;
+    padding: 10px;
   }
     .container-box {
         /* display: block; */

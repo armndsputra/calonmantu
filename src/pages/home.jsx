@@ -46,7 +46,7 @@ export default function Home() {
             {/* <span>{`http://localhost:3000/posts/284917364.jpeg)}`}</span> */}
             <h3 className="text-capitalizer"><Link className='detail-link' to={`/detail/${content.id}`}>{content.title}</Link></h3>
             <span className='writer'>by <span className="font-500 text-capitalizer">{content.author.name}</span></span>
-            <span className='comment-count'><FaRegComment className='comment-icon' /> 12</span>
+            <span className='comment-count'><FaRegComment className='comment-icon' /> 0</span>
         </div>
         ))}
         
