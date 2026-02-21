@@ -1,57 +1,55 @@
-import { Link } from 'react-router-dom'
+// npm packages
+import { Link, useLocation } from 'react-router-dom'
 
-
+// icons
 import { FaBars } from "react-icons/fa6";
-
 import { useState, useEffect } from 'react';
 
-export default function Nav() {
+export default function Header() {
 
     const [isOpen, setIsOpen] = useState(false);
-    const [isCss, setCss] = useState('')
-
+    const location = useLocation();
+    
+    // toggle menu
     const toggleMenu = () => {
         setIsOpen(!isOpen)
     }
 
+    // close menu when location changes
     useEffect(() => {
-        if (isOpen === true) {
-            setCss('navbar-show')
-        } else if (isOpen === false) {
-            setCss('')
-        }
-      }, [isOpen]);
+        setIsOpen(false);
+    }, [location]);
 
-    console.log(isCss)
 
   return (
-    <div div className='navbar'>
-        <div className='btn-menu'>
+    <header className='navbar'>
+        {/* button navbar */}
+        <div className='button-menu'>
             <span onClick={toggleMenu}>
                 <FaBars />
             </span>
         </div>
-        <div className='title-weblogid'>
+
+        {/* web title */}
+        <div className='web-title'>
             <h2>
-                {/* <Link className='web-name'>
-                    <img src={Calonmant} alt="" />
-                </Link> */}
                 <Link className='color-dark text-decoration-none color-dark web-name' to="/">calonmantu</Link>
-                </h2>
+            </h2>
         </div>
-        <div className={`navbar-menu ${isCss}`}>
+
+        {/* menu */}
+        <div className={`wrapper-menu ${isOpen ? 'active' : ''}`}>
             <div className={`menu`}>
                 <Link className='datalink' to="/">Home</Link>
                 <Link className='datalink' to="/images">Portfolio</Link>
                 <Link className='datalink' to="/about">About Me</Link>
-                {/* <Link className='datalink' to="/projects">Projects</Link> */}
             </div>
             <div className={`account-identity`}>
                 <Link className='datalink-login' to="/login">Log in</Link>
                 <Link className='datalink-signup' to="/signup">Sign up</Link>
             </div>
-            {/* <div className='divider'></div> */}
         </div>
-    </div>
+
+    </header>
   )
 } 

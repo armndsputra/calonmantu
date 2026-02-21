@@ -4,7 +4,7 @@ import { FaSquareFacebook } from "react-icons/fa6";
 import { FaSquareGit } from "react-icons/fa6";
 import { FaSquareInstagram } from "react-icons/fa6";
 
-export default function about () {
+export default function About () {
 
     return(<div className="container-about">
         <div className="about-content">
@@ -15,7 +15,7 @@ export default function about () {
                 <h3>About Me</h3><br />
                 
                 <p>
-                <div className='font-500'>Halo! Saya Trisna</div><br />
+                <span className='font-500'>Halo! Saya Trisna</span><br />
 
                 Seorang pemuda asal <span className='font-500'>Yogyakarta</span> yang antusias terhadap perkembangan teknologi. Di sela-sela menikmati musik, film, dan beratnya kehidupan, saya menuangkan pemikiran serta pengalaman ke dalam tulisan.
                 <br /><br />

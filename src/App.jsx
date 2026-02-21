@@ -1,30 +1,35 @@
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
+
+// css others
 import './App.css'
-import './css/nav.css'
+
+// css components
+import './css/header.css'
 import './css/search.css'
-import './css/home.css'
 import './css/footer.css'
+
+// css pages
+import './css/home.css'
 import './css/detail.css'
-import './css/notFound.css'
+import './css/NotFound.css'
 import './css/about.css'
 
 // components
-import Nav from './components/nav.jsx'
+import Header from './components/header.jsx'
 import Search from './components/search.jsx'
 import Footer from './components/footer.jsx'
-
 
 // pages  
 import Home from './pages/home.jsx'
 import Detail from './pages/detail.jsx'
-import NotFound from './pages/notFound.jsx'
+import NotFound from './pages/NotFound.jsx'
 import About from './pages/about.jsx'
 
 function App() {
 
-  return (
+    return (
     <BrowserRouter>
-      <Nav /> 
+      <Header /> 
       <Search />
       <div className='body-area'>
         <Routes>
