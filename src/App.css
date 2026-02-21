@@ -60,6 +60,15 @@ body {
     color: #1e1d1d;
 }
 
+ul li {
+    list-style: none;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
 @media screen and (max-width: 600px) {
     /* .body-area {
         padding: 10px;

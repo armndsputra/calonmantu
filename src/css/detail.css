@@ -4,6 +4,7 @@
     justify-content: space-between;
     align-items: flex-start;
     padding: 20px;
+    position: relative;
 }
 .page-detail {
     padding: 20px;
@@ -80,6 +81,33 @@
     line-height: 1.6;
     color: #555;
 }
+
+.share-buttons {
+    position: absolute;
+    top: 380px;
+    /* right: 0px; */
+    /* border: 1px solid red; */
+    left: 40px;
+    z-index: 10;
+    background-color: white;
+    padding: 6px;
+    /* border-radius: 5px; */
+    /* box-shadow: 0 2px 5px rgba(0,0,0,0.1); */
+}
+
+.share-buttons ul li a {
+    font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 768px) {
     .container-detail {

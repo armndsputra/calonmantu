@@ -5,6 +5,8 @@ import axios from "axios"
 import { Link } from "react-router-dom"
 
 import { FaAnglesRight } from "react-icons/fa6";
+import { FaSquareFacebook } from "react-icons/fa6";
+import { FaSquareInstagram } from "react-icons/fa6";
 
 import Loading from "../assets/Loading.gif"
 
@@ -43,6 +45,19 @@ export default function Detail() {
 
     return (
         <div className="container-detail">
+
+            {/* share */}
+            <div className="share-buttons">
+                <ul>
+                    <li>
+                        <a href={`https://www.facebook.com/sharer/sharer.php?u=https://calonmantu.sbs/detail/${id}`} target="_blank" rel="noopener noreferrer"><FaSquareFacebook className="color-dark" /></a>
+                        </li>
+
+                    <li>
+                        <a href={`https://www.instagram.com/share?url=https://calonmantu.sbs/detail/${id}`} target="_blank" rel="noopener noreferrer"><FaSquareInstagram className="color-dark" /></a>
+                    </li>
+                </ul>
+            </div>
 
             <div className="page-detail">
                 <div className="breadcrumb text-capitalizer">
