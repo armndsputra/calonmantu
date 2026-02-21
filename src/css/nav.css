@@ -171,18 +171,20 @@
         display: block;
         border: none;
         margin: 0;
-        padding: 4px;
+        padding: 0px;
         /* position: relative; */
         position: fixed;
         min-height: auto;
         /* border: 1px solid red; */
-        /* min-height: 100px; */
+        min-height: 100px;
         z-index: 50;
         /* border: 1px solid red; */
         /* background: transparent; */
         background-color: rgb(20, 20, 20);
         /* transform-origin: 5s 0; */
         transition: all 0.8s ease !important;
+        /* border-bottom: 1px solid red; */
+        padding-bottom: 0;
     }
 
     .navbar .btn-menu {
@@ -230,10 +232,11 @@
         padding: 5px;
         padding-top: 15px;
         padding-bottom: 15px;
-        border-bottom: 1px solid gainsboro;
+        border-bottom: 1px solid rgb(214, 213, 213);
         position: relative;
         background-color: white;
         margin: 0;
+        height: auto;
 
     }
 
@@ -299,6 +302,7 @@
         /* transform: translateY(-187%); */
         /* transition: all 0.8s ease; */
         /* border: 1px solid red; */
+        border-bottom: 1px solid rgb(199, 198, 198);
         position: relative;
         /* z-index: 50; */
         text-align: right;
