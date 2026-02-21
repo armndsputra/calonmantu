@@ -154,6 +154,7 @@
      opacity: 1 !important;
      position: relative !important;
      width: 100% ;
+     /* border-bottom: 1px solid #868484 !important; */
 }
 
     .navbar {
@@ -173,12 +174,15 @@
         padding: 4px;
         /* position: relative; */
         position: fixed;
+        min-height: auto;
         /* border: 1px solid red; */
-        min-height: 100px;
+        /* min-height: 100px; */
         z-index: 50;
         /* border: 1px solid red; */
         /* background: transparent; */
         background-color: rgb(20, 20, 20);
+        /* transform-origin: 5s 0; */
+        transition: all 0.8s ease !important;
     }
 
     .navbar .btn-menu {
