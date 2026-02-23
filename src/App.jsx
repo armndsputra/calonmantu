@@ -13,11 +13,13 @@ import './css/home.css'
 import './css/detail.css'
 import './css/NotFound.css'
 import './css/about.css'
+// import './css/login.css'
 
 // components
 import Header from './components/header.jsx'
 import Search from './components/search.jsx'
 import Footer from './components/footer.jsx'
+import Login from './pages/login.jsx'
 
 // pages  
 import Home from './pages/home.jsx'
@@ -34,10 +36,10 @@ function App() {
       <div className='body-area'>
         <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/detail/:id" element={<Detail />} />
+        <Route path="/:id" element={<Detail />} />
 
         <Route path="/about" element={<About/>}/>
-        <Route path="/projects" element={<h1>Projects Page</h1>} />
+        <Route path="/login" element={<Login/>}/>
 
         <Route path="*" element={<NotFound />} />
       </Routes>

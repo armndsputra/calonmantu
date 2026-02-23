@@ -7,8 +7,10 @@ import { Link } from "react-router-dom"
 import { FaAnglesRight } from "react-icons/fa6";
 import { FaSquareFacebook } from "react-icons/fa6";
 import { FaSquareInstagram } from "react-icons/fa6";
+import { FaShareAlt } from "react-icons/fa";
 
 import Loading from "../assets/Loading.gif"
+import NotFound404 from '../assets/404.gif'
 
 export default function Detail() {
  
@@ -34,30 +36,24 @@ export default function Detail() {
       });
   }, []);  
 
-  if (loading) return <div className="loading-container"><img src={Loading} alt="Loading" /></div>
-
-    // console.log(content);
-    if (error) {
-        return <div className="page-not-found">
-            <h1>404 Not Found</h1>
-        </div>
+  if (error) {
+        return (
+            <div className="page-not-found">
+                <div className="">
+                    <img src={NotFound404} alt="Not Found" />
+                </div>
+                <h1>Content Not Found</h1>
+            </div>
+        )
     }
 
+  if (loading) return <div className="loading-container"><img src={Loading} alt="Loading" /></div>
+
+    
+    
+
     return (
-        <div className="container-detail">
-
-            {/* share */}
-            <div className="share-buttons">
-                <ul>
-                    <li>
-                        <a href={`https://www.facebook.com/sharer/sharer.php?u=https://calonmantu.sbs/detail/${id}`} target="_blank" rel="noopener noreferrer"><FaSquareFacebook className="color-dark" /></a>
-                        </li>
-
-                    <li>
-                        <a href={`https://www.instagram.com/share?url=https://calonmantu.sbs/detail/${id}`} target="_blank" rel="noopener noreferrer"><FaSquareInstagram className="color-dark" /></a>
-                    </li>
-                </ul>
-            </div>
+        <div className="detail">
 
             <div className="page-detail">
                 <div className="breadcrumb text-capitalizer">
@@ -77,6 +73,23 @@ export default function Detail() {
                     <p className="post-category">Category: {content?.category?.name || "Uncategorized"}</p>
                 </div>
                 <div className="post-thumbnail">
+
+                    {/* share */}
+                    <div className="share-buttons">
+                        <ul>
+                            <li>
+                                <FaShareAlt className="color-dark" />
+                            </li>
+                            <li>
+                                <a href={`https://www.facebook.com/sharer/sharer.php?u=https://calonmantu.sbs/detail/${id}`} target="_blank" rel="noopener noreferrer"><FaSquareFacebook className="color-dark" /></a>
+                                </li>
+
+                            {/* <li>
+                                <a href={`https://www.instagram.com/share?url=https://calonmantu.sbs/detail/${id}`} target="_blank" rel="noopener noreferrer"><FaSquareInstagram className="color-dark" /></a>
+                            </li> */}
+                        </ul>
+                    </div>
+
                     <img src={`https://calonmantu.sbs/${content?.thumbnail.replace(/^\/?public\/?/i, '')}`} alt="News Image" />
                 </div>
                 <div className="post-content">

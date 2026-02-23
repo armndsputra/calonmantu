@@ -6,7 +6,7 @@ import { FaSquareInstagram } from "react-icons/fa6";
 
 export default function About () {
 
-    return(<div className="container-about">
+    return(<div className="about">
         <div className="about-content">
             <div className="about-image">
                 <img src={user} alt="Profile" />
@@ -15,7 +15,7 @@ export default function About () {
                 <h3>About Me</h3><br />
                 
                 <p>
-                <span className='font-500'>Halo! Saya Trisna</span><br />
+                <span className='font-500'>Halo! Saya Trisna</span><br /><br />
 
                 Seorang pemuda asal <span className='font-500'>Yogyakarta</span> yang antusias terhadap perkembangan teknologi. Di sela-sela menikmati musik, film, dan beratnya kehidupan, saya menuangkan pemikiran serta pengalaman ke dalam tulisan.
                 <br /><br />
@@ -30,6 +30,7 @@ export default function About () {
                 </div>
             </div>
         </div>
+        
         <div className='album'>
             
         </div>

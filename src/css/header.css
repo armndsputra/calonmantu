@@ -8,13 +8,23 @@ header.navbar {
     /* padding: 20px; */
     /* padding-bottom: 10px; */
     /* border: 1px solid red; */
-    background-color: white;
+    background-color: rgb(34, 34, 34);
     position: fixed;
     z-index: 100;
     width: 100vw;
     border-bottom: 1px solid #c9c3c3;
     top: 0;
+    transition: all 0.3s ease;
 }
+
+header.navbar.nonactive {
+    /* background-color: transparent; */
+    transform: translateY(-100%);
+    border-bottom: none;
+    /* border: 1px solid red; */
+    transition: all 0.3s ease;
+}
+
 
 /* button menu */
 header.navbar .button-menu {
@@ -45,11 +55,11 @@ header.navbar .web-title .web-name {
     text-transform: capitalize;
     /* text-transform: uppercase; */
     font-family: "Playwrite NZ Basic", cursive;
-    /* color: white; */
+    color: white;
 }
 
 /* main menu */
-.navbar .menu {
+header.navbar .menu {
     display: flex;
     /* gap: 20px; */
     /* margin-bottom: 30px; */
@@ -74,16 +84,14 @@ header.navbar .wrapper-menu .menu {
 
 header.navbar .wrapper-menu .menu .datalink {
     text-decoration: none;
-    color: #353638;
+    color: #f4f5f7;
     font-weight: 400;
     font-size: 17px;
-    /* border: 1px solid red; */
-    /* text-transform: uppercase */
     text-transform: capitalize;
     padding: 25px 15px;
     border-bottom: 2px solid transparent;
-     transition: all 0.3s ease;
-     letter-spacing: 1px;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
      /* border-left: 1px solid gainsboro; */
 }
 
@@ -91,10 +99,10 @@ header.navbar .wrapper-menu .menu .datalink:hover {
     /* color: #dc8307; */
     transition: all 0.3s ease;
     /* background-color: #e0e0e0; */
-    background-color: #eea2388a;
+    background-color: #dedddc8a;
     /* padding: 4px 10px; */
     /* border-radius: 10px; */
-    border-bottom: 2px solid #dc8307;
+    /* border-bottom: 2px solid #dc8307; */
 }
 
 /* account login & register */
@@ -111,7 +119,7 @@ header.navbar .wrapper-menu  .account-identity {
 
 header.navbar .wrapper-menu  .account-identity .datalink-login {
     text-decoration: none;
-    color: #353638;
+    color: #dbdee4;
     font-weight: 500;
     font-size: 14px;
     margin-right: 10px;

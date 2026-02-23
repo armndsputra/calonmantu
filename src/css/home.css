@@ -25,6 +25,7 @@
 .container-box .box img {
   width: 100%;
   height: 80%;
+  filter: grayscale(60%);
 }
 
 .container-box .box h3 {

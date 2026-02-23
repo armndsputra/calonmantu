@@ -1,60 +1,11 @@
-.container-about {
-    /* width: 1000px; */
+.about {
     margin: auto;
-    /* border: 1px solid red; */
     position: relative;
     padding: 0;
-}
-
-.container-about p {
-    text-align: justify;
-}
-
-.container-about .about-image {
     /* border: 1px solid red; */
-    width: 100%;
 }
 
-.container-about .about-image img {
-    object-fit: cover;
-    filter: grayscale(60%);
-    width: 280px;
-    height: 280px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-bottom: 20px;
-}
-
-.container-about .about-description {
-    max-width: 600px;
-    margin: auto;
-    /* position: absolute; */
-    position: relative;
-    /* margin: 0; */
-}
-
-.container-about .about-description h3 {
-    font-size: 32px;
-    margin-bottom: 10px;
-}
-
-.container-about .about-description h3::after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 3px;
-    background-color: #f9c716;
-    margin-top: 5px;
-    /* margin: auto; */
-}
-
-.container-about .about-description p {
-    font-size: 17px;
-    /* border-left: 2px solid #f9c716; */
-    /* padding-left: 10px; */
-}
-
-.container-about .about-content {
+.about .about-content {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -64,39 +15,84 @@
     padding-top: 40px;
 }
 
-.container-about .about-content .medsos {
+.about .about-content .about-image {
+    /* border: 1px solid red; */
+    width: 100%;
+}
+
+.about .about-content .about-image img {
+    object-fit: cover;
+    filter: grayscale(60%);
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.about .about-content .about-description {
+    max-width: 600px;
+    margin: auto;
+    /* position: absolute; */
+    position: relative;
+    /* margin: 0; */
+}
+
+.about .about-content .about-description h3 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.about  .about-content .about-description h3::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #f9c716;
+    margin-top: 5px;
+    /* margin: auto; */
+}
+
+.about .about-content .about-description p {
+    font-size: 17px;
+    /* border-left: 2px solid #f9c716; */
+    /* padding-left: 10px; */
+}
+
+
+.about .about-content .about-description .medsos {
     display: flex;
     gap: 10px;
     margin-top: 20px;
     font-size: 50px;
 }
 
-.container-about .about-content .medsos a {
+.about .about-content .about-description .medsos a {
     color: #333;
     transition: color 0.3s ease;
 }
 
-.container-about .album {
+.about .album {
     margin-top: 50px;
     /* border: 1px solid red; */
     height: 200px;
     /* background-color: #f0f0f0; */
-    background-color: white;
+    /* background-color: rgb(224, 40, 40); */
 }
 
 
 
 
-
-@media (max-width: 768px) {
-    .container-about {
+/* responsive */
+@media (max-width: 600px) {
+    .about {
         width: 100%;
         /* border: 1px solid red; */
         margin: 0;
         padding: 0;
     }
 
-    .container-about .about-content {
+    .about .about-content {
         flex-direction: column;
         align-items: flex-start;
         width: 100%;
@@ -105,14 +101,14 @@
         gap: 0px;
     }
 
-    .about-content .about-image {
+    .about .about-content .about-image {
         /* width: 250px; */
         /* height: 250px; */
         text-align: center;
         /* border: 1px solid red; */
     }
 
-    .container-about .about-content .about-description {
+    .about .about-content .about-description {
         max-width: 100%;
         margin: 20px 0;
         font-size: 11px;
@@ -121,19 +117,19 @@
         /* background-color: rgb(14, 16, 16); */
     }
 
-    .container-about .about-content .about-description h3 {
-        font-size: 20px;
+    .about .about-content .about-description h3 {
+        font-size: 32px;
         text-align: center;
         padding: 8px;
     }
 
-    .container-about .about-content .about-description h3::after {
+    .about .about-content .about-description h3::after {
         width: 30px;
         height: 2px;
         margin: 5px auto;
     }
 
-    .container-about .about-content .about-description p {
+    .about .about-content .about-description p {
         font-size: 15px;
     }
     

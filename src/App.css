@@ -15,7 +15,7 @@ body {
 
 .body-area {
     border-top: 1px solid #dddddd2f;
-    min-height: 100vh;
+    min-height: 50vh;
     padding: 0;
 }
 

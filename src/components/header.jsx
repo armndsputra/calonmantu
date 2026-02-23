@@ -9,20 +9,49 @@ export default function Header() {
 
     const [isOpen, setIsOpen] = useState(false);
     const location = useLocation();
+
+    const [showNavbar, setShowNavbar] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
     
     // toggle menu
     const toggleMenu = () => {
         setIsOpen(!isOpen)
     }
 
+    // control navbar visibility based on scroll direction
+    const controlNavbar = () => {
+    if (typeof window !== 'undefined') {
+      if (window.scrollY > lastScrollY) {
+        // Scroll ke bawah
+        setShowNavbar(false);
+      } else {
+        // Scroll ke atas
+        setShowNavbar(true);
+      }
+      setLastScrollY(window.scrollY);
+    }
+  };
+
     // close menu when location changes
     useEffect(() => {
         setIsOpen(false);
     }, [location]);
 
+    // add scroll event listener to control navbar visibility
+    useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', controlNavbar);
+
+      // Cleanup
+      return () => {
+        window.removeEventListener('scroll', controlNavbar);
+      };
+    }
+  }, [lastScrollY]);
+
 
   return (
-    <header className='navbar'>
+    <header className={`navbar ${!showNavbar ? 'nonactive' : ''}`}>
         {/* button navbar */}
         <div className='button-menu'>
             <span onClick={toggleMenu}>

@@ -40,7 +40,7 @@ export default function Home() {
         {contents.data.map(content => (
           <div key={content.id} className="box">
             {/* <img src={`http://localhost:3000/${content.thumbnail.replace(/^\/?public\/?/i, '')}`} alt="News Image" /> */}
-            <Link to={`/detail/${content.id}`} className="text-decoration-none">
+            <Link to={`/${content.id}`} className="text-decoration-none">
             <img src={`https://calonmantu.sbs/${content.thumbnail.replace(/^\/?public\/?/i, '')}`} alt="News Image" />
             </Link>
             {/* <span>{`http://localhost:3000/posts/284917364.jpeg)}`}</span> */}
