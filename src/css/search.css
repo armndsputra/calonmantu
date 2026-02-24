@@ -17,10 +17,12 @@
 .search .search-area input[type="text"] {
   width: 100%;
   padding: 5px;
+  padding-left: 20px;
   border: none;
   font-size: 16px;
   outline: none;
   background-color: transparent;
+  color: #636262;
 }
 
 .search .search-area button {

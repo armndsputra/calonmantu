@@ -73,6 +73,9 @@
     position: relative;
     /* margin-top: 15px; */
 }
+.wrapperMenu::-webkit-scrollbar {
+        display: none;
+    }
 .menu {
     display: flex;
     /* gap: 20px; */
@@ -81,13 +84,13 @@
     /* border: 1px solid red; */
     position: relative;
     /* height: 40px; */
+    margin: 0;
 
 }
 
 /* menu */
-.menu {
-    /* border: 1px solid red; */
-    margin: 0;
+.menuActive {
+    background-color: white !important;
 }
 
 .datalink {

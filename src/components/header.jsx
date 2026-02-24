@@ -7,8 +7,6 @@ import styles from './header.module.css'
 import { FaBars } from "react-icons/fa6";
 import { useState, useEffect } from 'react';
 
-import logo from '../assets/logo.png'
-
 export default function Header() {
 
     const [isOpen, setIsOpen] = useState(false);
@@ -16,6 +14,7 @@ export default function Header() {
 
     const [showNavbar, setShowNavbar] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
+    // const [menuActive, setMenuActive] = useState('')
     
     // toggle menu
     const toggleMenu = () => {
@@ -39,6 +38,7 @@ export default function Header() {
     // close menu when location changes
     useEffect(() => {
         setIsOpen(false);
+
     }, [location]);
 
     // add scroll event listener to control navbar visibility
@@ -53,6 +53,7 @@ export default function Header() {
     }
   }, [lastScrollY]);
 
+  // console.log(menuActive)
 
   return (
     <header className={`${styles.navbar} ${!showNavbar ? `${styles.nonective}` : ''}`}>
@@ -74,10 +75,10 @@ export default function Header() {
         {/* menu */}
         <div className={`${styles.wrapperMenu} ${isOpen ? `${styles.active}` : ''}`}>
             <div className={styles.menu}>
-                <Link className={styles.datalink} to="/">Home</Link>
-                <Link className={styles.datalink} to="/images">Portfolio</Link>
-                <Link className={styles.datalink} to="/about">About Me</Link>
-                <Link className={styles.datalink} to="/category">Category</Link>
+                <Link className={`${styles.datalink} ${location.pathname === '/' ? styles.menuActive : ''}`}  to="/">Home</Link>
+                <Link className={`${styles.datalink} ${location.pathname === '/portfolio' ? styles.menuActive : ''}`} to="/portfolio">Portfolio</Link>
+                <Link className={`${styles.datalink} ${location.pathname === '/about' ? styles.menuActive : ''}`} to="/about">About Me</Link>
+                <Link className={`${styles.datalink} ${location.pathname === '/category' ? styles.menuActive : ''}`} to="/category">Category</Link>
             </div>
             <div className={styles.accountIdentity}>
                 <Link className={styles.datalinkLogin} to="/login">Log in</Link>

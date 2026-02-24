@@ -28,7 +28,7 @@ function App() {
     <BrowserRouter>
       <Header /> 
       <Search />
-      <div className='body-area'>
+      <div className='bodyArea'>
         <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/:id" element={<Detail />} />

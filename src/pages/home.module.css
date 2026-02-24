@@ -2,6 +2,7 @@
   /* border: 1px solid #ccc; */
   min-height: 100vh;
   padding: 20px;
+  margin-bottom: 50px;
 } 
 
 .container {
@@ -16,30 +17,34 @@
 
 .box {
   width: 270px;
-  height: 270px;
+  /* max-height: 270px; */
   /* border: 1px solid #ccc; */
   padding: 5px;
   /* text-align: center; */
   position: relative;
+  margin-bottom: 20px;
 }
 
 .box img {
   width: 100%;
-  height: 80%;
+  height: 200px;
   filter: grayscale(60%);
 }
 
 .box h3 {
-  margin: 5px 0 0 0;
-  font-size: 12px;
-  /* text-transform: capitalize; */
-  /* border: 1px solid #ccc; */
-  width: 70%;
+  width: 220px;
+  /* border: 1px solid red; */
+  font-size: 11px;
 }
 
 .detailLink {
   text-decoration: none;
   color: #000;
+  /* border: 1px solid red; */
+  display: block;
+  /* overflow: hidden; */
+  width: 220px;
+  text-overflow: ellipsis;
 }
 
 .commentCount {

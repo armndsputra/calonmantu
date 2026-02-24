@@ -46,7 +46,7 @@ export default function Home() {
             <img src={`https://calonmantu.sbs/${content.thumbnail.replace(/^\/?public\/?/i, '')}`} alt="News Image" />
             </Link>
             {/* <span>{`http://localhost:3000/posts/284917364.jpeg)}`}</span> */}
-            <h3 className=""><Link className={styles.detailLink} to={`/detail/${content.id}`}>{content.title}</Link></h3>
+            <h3 className=""><Link className={styles.detailLink} to={`/${content.id}`}>{content.title}</Link></h3>
             <span className={styles.writer}>by <span className="font-500 text-capitalizer">{content.author.name}</span></span>
             <span className={styles.commentCount}><FaRegComment className='comment-icon' /> 0</span>
         </div>

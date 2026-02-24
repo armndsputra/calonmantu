@@ -75,13 +75,14 @@ form button {
 @media (max-width: 500px) {
     .login {
         background-color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: block;
+        /* border: 1px solid red; */
     }
     .card {
         width: 90%;
         height: auto;
         padding: 20px;
+        /* border: 1px solid blue; */
+        margin: auto;
     }
 }

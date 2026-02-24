@@ -4,7 +4,7 @@ export default function Search () {
   return (
     <div className="search">
         <div className="search-area">
-            <input type="text" placeholder="Search..." />
+            <input type="text" placeholder="  Search..." />
             <button><FaMagnifyingGlass /></button>
         </div>
     </div>
