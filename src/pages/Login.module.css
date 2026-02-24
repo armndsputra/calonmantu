@@ -15,7 +15,6 @@
 .card {
     width: 400px;
     height: 500px;
-    /* border: 1px solid blue; */
     background-color: white;
     padding: 46px;
 }
@@ -71,4 +70,18 @@ form button {
     text-align: center;
     font-size: 13px;
     /* border: 1px solid red; */
+}
+
+@media (max-width: 500px) {
+    .login {
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .card {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
 }

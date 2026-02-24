@@ -1,26 +1,26 @@
-import style from "./Login.module.css";
+import styles from "./login.module.css";
 
 export default function Login() {
   return (
-    <div className={style.login}>
-      <div className={style.card}>
-        <div className={style.brand}>
+    <div className={styles.login}>
+      <div className={styles.card}>
+        <div className={styles.brand}>
             <h1>Login</h1>
         </div>
-        <div className={style.form}>
+        <div className={styles.form}>
             <form action="">
-                <div className={style.formGroup}>
+                <div className={styles.formGroup}>
                     <label htmlFor="email">Email</label>
                     <input type="email" id="email" name="email" />
                 </div>
-                <div className={style.formGroup}>
+                <div className={styles.formGroup}>
                     <label htmlFor="password">Password</label>
                     <input type="password" id="password" name="password" />
                 </div>
                 <button type="submit">Login</button>
             </form>
         </div>
-        <div className={style.footer}>
+        <div className={styles.footer}>
             <p>Don't have an account? <a href="/register">Register</a></p>
             
         </div>

@@ -12,6 +12,8 @@ import { FaShareAlt } from "react-icons/fa";
 import Loading from "../assets/Loading.gif"
 import NotFound404 from '../assets/404.gif'
 
+import styles from './detail.module.css'
+
 export default function Detail() {
  
     // console.log(useParams().id)
@@ -53,13 +55,13 @@ export default function Detail() {
     
 
     return (
-        <div className="detail">
+        <div className={styles.detail}>
 
-            <div className="page-detail">
-                <div className="breadcrumb text-capitalizer">
+            <div className={styles.container}>
+                <div className={styles.breadcrumb}>
                 <ul>
-                    <li><Link className="text-decoration-none color-dark font-500" to="/">Home</Link></li>
-                    <li className="separator"><FaAnglesRight className="color-dark" /></li>
+                    <li><Link className="text-decoration-none color-dark font-500" to="/">home</Link></li>
+                    <li className={styles.separator}><FaAnglesRight className="color-dark" /></li>
                     {/* <li>{content?.author?. || "Unknown Author"}</li> */}
                     {/* <li className="separator"><FaAnglesRight className="color-dark" /></li> */}
                     <li>{content?.title || "Loading..."}</li>
@@ -67,15 +69,15 @@ export default function Detail() {
                 </div>
 
                 <h1 className="">{content?.title || "Loading..."}</h1>
-                <div className="post-data">
+                <div className={styles.postData}>
                     <p className="post-author">by <span className="font-500 text-capitalizer">{content?.author?.name || "Unknown Author"}</span></p> |
                     <p className="post-date">{content?.createdAt?.split("T")[0] || "Unknown Date"}</p> |
                     <p className="post-category">Category: {content?.category?.name || "Uncategorized"}</p>
                 </div>
-                <div className="post-thumbnail">
+                <div className={styles.postThumbnail}>
 
                     {/* share */}
-                    <div className="share-buttons">
+                    <div className={styles.shareButtons}>
                         <ul>
                             <li>
                                 <FaShareAlt className="color-dark" />
@@ -83,10 +85,6 @@ export default function Detail() {
                             <li>
                                 <a href={`https://www.facebook.com/sharer/sharer.php?u=https://calonmantu.sbs/detail/${id}`} target="_blank" rel="noopener noreferrer"><FaSquareFacebook className="color-dark" /></a>
                                 </li>
-
-                            {/* <li>
-                                <a href={`https://www.instagram.com/share?url=https://calonmantu.sbs/detail/${id}`} target="_blank" rel="noopener noreferrer"><FaSquareInstagram className="color-dark" /></a>
-                            </li> */}
                         </ul>
                     </div>
 

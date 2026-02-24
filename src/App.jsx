@@ -4,16 +4,11 @@ import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 import './App.css'
 
 // css components
-import './css/header.css'
 import './css/search.css'
 import './css/footer.css'
 
 // css pages
-import './css/home.css'
-import './css/detail.css'
 import './css/NotFound.css'
-import './css/about.css'
-// import './css/login.css'
 
 // components
 import Header from './components/header.jsx'
@@ -38,7 +33,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/:id" element={<Detail />} />
 
-        <Route path="/about" element={<About/>}/>
+        <Route path="/about" element={<About />}/>
         <Route path="/login" element={<Login/>}/>
 
         <Route path="*" element={<NotFound />} />

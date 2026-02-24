@@ -5,6 +5,8 @@ import axios from "axios"
 
 import Loading from "../assets/Loading.gif"
 
+import styles from './home.module.css'
+
 export default function Home() {
 
     const [contents, setContents] = useState([]);
@@ -31,22 +33,22 @@ export default function Home() {
   console.log(contents.data);
 
   return (
-    <div className="page-home">
-      <div className="page-title">
-        <h1 className="text-capitalizer">Latest News</h1>
+    <div className={styles.home}>
+      <div className={styles.pageTitle}>
+        <h3 className="text-capitalizer">Latest News</h3>
       </div>
-      <div className="container-box">
+      <div className={styles.container}>
         
         {contents.data.map(content => (
-          <div key={content.id} className="box">
+          <div key={content.id} className={styles.box}>
             {/* <img src={`http://localhost:3000/${content.thumbnail.replace(/^\/?public\/?/i, '')}`} alt="News Image" /> */}
             <Link to={`/${content.id}`} className="text-decoration-none">
             <img src={`https://calonmantu.sbs/${content.thumbnail.replace(/^\/?public\/?/i, '')}`} alt="News Image" />
             </Link>
             {/* <span>{`http://localhost:3000/posts/284917364.jpeg)}`}</span> */}
-            <h3 className="text-capitalizer"><Link className='detail-link' to={`/detail/${content.id}`}>{content.title}</Link></h3>
-            <span className='writer'>by <span className="font-500 text-capitalizer">{content.author.name}</span></span>
-            <span className='comment-count'><FaRegComment className='comment-icon' /> 0</span>
+            <h3 className=""><Link className={styles.detailLink} to={`/detail/${content.id}`}>{content.title}</Link></h3>
+            <span className={styles.writer}>by <span className="font-500 text-capitalizer">{content.author.name}</span></span>
+            <span className={styles.commentCount}><FaRegComment className='comment-icon' /> 0</span>
         </div>
         ))}
         

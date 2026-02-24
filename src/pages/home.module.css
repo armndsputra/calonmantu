@@ -1,19 +1,20 @@
-.page-home {
+.home {
   /* border: 1px solid #ccc; */
   min-height: 100vh;
   padding: 20px;
 } 
 
-.container-box {
+.container {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   /* border: 1px solid #ccc; */
   gap: 10px;
   /* padding: 20px; */
+  /* padding: 10px; */
 }
 
-.container-box .box {
+.box {
   width: 270px;
   height: 270px;
   /* border: 1px solid #ccc; */
@@ -22,13 +23,13 @@
   position: relative;
 }
 
-.container-box .box img {
+.box img {
   width: 100%;
   height: 80%;
   filter: grayscale(60%);
 }
 
-.container-box .box h3 {
+.box h3 {
   margin: 5px 0 0 0;
   font-size: 12px;
   /* text-transform: capitalize; */
@@ -36,12 +37,12 @@
   width: 70%;
 }
 
-.container-box .box h3 .detail-link {
+.detailLink {
   text-decoration: none;
   color: #000;
 }
 
-.container-box .box span.comment-count {
+.commentCount {
   position: absolute;
   bottom: 28px;
   right: 5px;
@@ -53,7 +54,7 @@
   
 }
 
-.container-box .box span.comment-count .comment-icon {
+.commentIcon {
   /* margin-top: 20px; */
   /* border: 1px solid black; */
   padding: 0;
@@ -62,7 +63,7 @@
   margin-bottom: -4px;
 }
 
-.container-box .box span.writer {
+.writer {
   /* position: absolute; */
   bottom: 15px;
   left: 5px;
@@ -72,13 +73,13 @@
   display: inline-block;
 }
 
-.page-title {
+.pageTitle {
   margin: 17px 0;
   /* font-size: 20px; */
   /* border: 1px solid #ccc; */
 } 
 
-.page-title::after {
+.pageTitle::after {
   content: "";
   display: block;
   width: 50px;
@@ -87,9 +88,10 @@
   margin-top: 10px;
 }
 
-.page-title h1 {
+.pageTitle h3 {
   font-size: 20px;
   text-transform: capitalize;
+  /* border: 1px solid red; */
 }
 
 
@@ -102,10 +104,10 @@
 
 @media screen and (max-width: 600px) {
 
-  .page-home {
+  .home {
     padding: 10px;
   }
-    .container-box {
+    .container{
         /* display: block; */
         /* border: 1px solid #ccc; */
         display: block;
@@ -113,14 +115,14 @@
         margin: 0;
     }
 
-  .container-box .box {
+  .box {
     width: 100%;
     height: 290px;
     margin-bottom: 10px;
     /* height: auto; */
   }
 
-  .container-box .box img {
+  .box img {
     height: 200px;
   }
 }
