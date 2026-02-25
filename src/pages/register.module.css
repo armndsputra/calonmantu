@@ -1,0 +1,122 @@
+.register {
+    /* border: 1px solid red; */
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.decoration {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    /* border: 1px solid red; */
+    /* bottom: -100px; */
+    transform: rotate(50deg);
+    background-color: rgba(220, 220, 220, 0.312);
+    z-index: -10;
+    /* left: ; */
+    top: -50%;
+}
+
+.container {
+    /* border: 1px solid red; */
+    width: 1000px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.card {
+    /* border: 1px solid gainsboro; */
+    width: 530px;
+    min-height: 400px;
+}
+
+.card h2 {
+    font-weight: 500;
+    font-size: 35px;
+    margin-bottom: 10px;
+    font-family: "Playwrite NZ Basic", cursive;
+    position: relative;
+}
+
+.card h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #de9630;
+    margin-top: 10px;
+}
+
+.card p {
+    font-size: 13px;
+}
+
+.card form {
+    margin-top: 30px;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.inputGroup input {
+    outline: none;
+    border: 1px solid gainsboro;
+    padding: 6px;
+    /* color: gray; */
+    font-weight: lighter;
+    font-size: 17px;
+}
+
+.genderGroup {
+    margin-bottom: 10px;
+}
+.genderGroup label {
+    margin-right: 10px;
+}
+
+.genderGroup select {
+    border: 1px solid gainsboro;
+    padding: 6px;
+    outline: none;
+}
+
+.birthdayGroup label {
+     margin-right: 10px;
+}
+
+.birthdayGroup input {
+    padding: 6px;
+    outline: none;
+    border: 1px solid gainsboro;
+}
+
+.card form button {
+     margin-top: 20px;
+    width: 100%;
+    height: 40px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 500px) {
+    .container {
+        margin: 0;
+        width: 100%;
+    }
+
+    .card h2 {
+        font-size: 25px;
+    }
+    .card {
+        width: 100%;
+        padding: 10px;
+    }
+}

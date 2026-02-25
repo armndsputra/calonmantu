@@ -21,6 +21,7 @@ import Home from './pages/home.jsx'
 import Detail from './pages/detail.jsx'
 import NotFound from './pages/NotFound.jsx'
 import About from './pages/about.jsx'
+import Register from './pages/register.jsx'
 
 function App() {
 
@@ -34,7 +35,8 @@ function App() {
         <Route path="/:id" element={<Detail />} />
 
         <Route path="/about" element={<About />}/>
-        <Route path="/login" element={<Login/>}/>
+        <Route path="/login" element={<Login />}/>
+        <Route path="/signup" element={<Register />}/>
 
         <Route path="*" element={<NotFound />} />
       </Routes>
