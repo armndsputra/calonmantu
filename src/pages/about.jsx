@@ -1,8 +1,14 @@
 import styles from './About.module.css'
 
+import { FaFacebookSquare } from "react-icons/fa";
+import { FaInstagramSquare } from "react-icons/fa";
+import { FaSquareGithub } from "react-icons/fa6";
+
+
 export default function About () {
 
     return(<div className={styles.about}>
+        <div className={styles.decoration}></div>
         <div className={styles.container}>
             <div className={styles.description}>
                 <h3>Hello, ini saya</h3>
@@ -14,6 +20,20 @@ export default function About () {
                 <p>
                     Blog ini adalah ruang bagi saya untuk berbagi pengetahuan dan cerita seputar dunia teknologi, serta hal-hal menarik lainnya yang saya pelajari dalam perjalanan sebagai life-long learner.
                 </p>
+                <div className={styles.link}>
+                    <h5>Follow Me</h5>
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/trisna.armandasaputra/"><FaFacebookSquare /></a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/armndsputra/"><FaInstagramSquare /></a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/armndsputra"><FaSquareGithub /></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>)
