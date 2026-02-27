@@ -17,6 +17,19 @@ export default function Home() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
+     // pagination
+    const [startPage, setStartPage] = useState(0);
+    const [totalData, setTotalData] = useState(0);
+    const limitPerPage = 4
+    const totalPages = Math.ceil(totalData/limitPerPage)
+    const listItems = [];
+    for (let i = 1; i <= totalPages; i++) {
+      listItems.push(<li key={i}>
+              <button onClick={() => setStartPage((i - 1) * limitPerPage)}>{i}</button>
+            </li>);
+    }
+
+
    useEffect(() => {
     if (search) {
       // Jika ada hasil search dari halaman Search
@@ -25,18 +38,22 @@ export default function Home() {
       setLoading(false);
     } else {
       // Jika buka halaman home biasa
-      axios.get('https://calonmantu.sbs/api/post/?limit=0&offset=0')
+      axios.get('https://calonmantu.sbs/api/post/?limit='+ limitPerPage+'&offset='+ startPage)
         .then(response => {
           // console.log(response.data.data)
-          setContents(response.data.data); // ambil array saja
+          setContents(response.data.data);
+          setTotalData(response.data.total)
           setLoading(false);
+          
         })
         .catch(error => {
           setError(error.message);
           setLoading(false);
         });
     }
-  },[search]);
+  },[search, startPage]);
+
+ 
 
   if (loading) return <div className="loading-container"><img src={Loading} alt="Loading" /></div>;
   if (error) return <div>Error: {error}</div>;
@@ -61,6 +78,14 @@ export default function Home() {
         </div>
         ))}
         
+      </div>
+      {/* pagination */}
+      <div className={styles.pagination}>
+        <ul>
+          <ul>
+            {listItems}
+          </ul>
+        </ul>
       </div>
     </div>
   )

@@ -99,7 +99,28 @@
   /* border: 1px solid red; */
 }
 
+.pagination {
+  margin-top: 40px;
+  /* border: 1px solid red; */
+  
+}
 
+.pagination ul {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination ul li button {
+  background: none;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid gainsboro;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: whitesmoke;
+}
 
 
 
