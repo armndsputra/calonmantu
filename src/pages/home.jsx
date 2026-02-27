@@ -2,6 +2,7 @@ import { FaRegComment } from "react-icons/fa6";
 import { Link } from 'react-router-dom'
 import { useEffect, useState } from "react"
 import axios from "axios"
+import { useLocation } from "react-router-dom";
 
 import Loading from "../assets/Loading.gif"
 
@@ -9,28 +10,36 @@ import styles from './home.module.css'
 
 export default function Home() {
 
+    const location = useLocation();
+    const { search } = location.state || {};
+
     const [contents, setContents] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
    useEffect(() => {
-    // Mengambil data dari API
-    axios.get('https://calonmantu.sbs/api/post/?limit=0&offset=0')
-    // axios.get('http://localhost:3000/api/post/?limit=0&offset=0')
-      .then(response => {
-        setContents(response.data);
-        setLoading(false);
-      })
-      .catch(error => {
-        setError(error.message);
-        setLoading(false);
-      });
-  }, []);   
+    if (search) {
+      // Jika ada hasil search dari halaman Search
+      setContents(search.data);
+      // console.log(search.data)
+      setLoading(false);
+    } else {
+      // Jika buka halaman home biasa
+      axios.get('https://calonmantu.sbs/api/post/?limit=0&offset=0')
+        .then(response => {
+          // console.log(response.data.data)
+          setContents(response.data.data); // ambil array saja
+          setLoading(false);
+        })
+        .catch(error => {
+          setError(error.message);
+          setLoading(false);
+        });
+    }
+  },[search]);
 
   if (loading) return <div className="loading-container"><img src={Loading} alt="Loading" /></div>;
   if (error) return <div>Error: {error}</div>;
-
-  console.log(contents.data);
 
   return (
     <div className={styles.home}>
@@ -39,7 +48,7 @@ export default function Home() {
       </div>
       <div className={styles.container}>
         
-        {contents.data.map(content => (
+        {contents.map(content => (
           <div key={content.id} className={styles.box}>
             {/* <img src={`http://localhost:3000/${content.thumbnail.replace(/^\/?public\/?/i, '')}`} alt="News Image" /> */}
             <Link to={`/${content.id}`} className="text-decoration-none">
