@@ -74,7 +74,7 @@ export default function Home() {
   return (
     <div className={styles.home}>
       <div className={styles.pageTitle}>
-        <h3 className="text-capitalizer">Latest News</h3>
+        <h3 className="text-capitalizer">Home</h3>
       </div>
       <div className={styles.container}>
         

@@ -1,4 +1,4 @@
-import styles from './About.module.css'
+import styles from './about.module.css'
 
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
