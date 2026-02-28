@@ -2,7 +2,8 @@ import { FaRegComment } from "react-icons/fa6";
 import { Link } from 'react-router-dom'
 import { useEffect, useState } from "react"
 import axios from "axios"
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+
 
 import Loading from "../assets/Loading.gif"
 
@@ -10,6 +11,7 @@ import styles from './home.module.css'
 
 export default function Home() {
 
+    // const navigate = useNavigate();
     const location = useLocation();
     const { search } = location.state || {};
 
@@ -20,7 +22,7 @@ export default function Home() {
      // pagination
     const [startPage, setStartPage] = useState(0);
     const [totalData, setTotalData] = useState(0);
-    const limitPerPage = 4
+    const limitPerPage = 8
     const totalPages = Math.ceil(totalData/limitPerPage)
     const listItems = [];
     for (let i = 1; i <= totalPages; i++) {
@@ -31,11 +33,22 @@ export default function Home() {
 
 
    useEffect(() => {
+    console.log(search)
     if (search) {
       // Jika ada hasil search dari halaman Search
-      setContents(search.data);
-      // console.log(search.data)
-      setLoading(false);
+      // console.log('ini search', search)
+
+      axios.post('https://calonmantu.sbs/api/post/keywords?limit=0&offset=0',{
+        keywords : search
+      }).then(response => {
+        // console.log(response.data.data)
+        setContents(response.data.data)
+        setLoading(false);
+      }).catch(err => {
+        console.log(err)
+      })
+
+
     } else {
       // Jika buka halaman home biasa
       axios.get('https://calonmantu.sbs/api/post/?limit='+ limitPerPage+'&offset='+ startPage)
@@ -80,13 +93,14 @@ export default function Home() {
         
       </div>
       {/* pagination */}
-      <div className={styles.pagination}>
-        <ul>
+      
+      {!search && (
+        <div className={styles.pagination}>
           <ul>
             {listItems}
           </ul>
-        </ul>
-      </div>
+        </div>
+      )}
     </div>
   )
 }
