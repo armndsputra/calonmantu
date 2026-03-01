@@ -29,7 +29,7 @@ export default function MainRouter() {
 
             {/* ADMIN ROUTES */}
             <Route path="/admin" element={<AdminLayout />}>
-                <Route index element={<h2>das</h2>} />
+                <Route index element={<h2>dashboard</h2>} />
             </Route>
 
             <Route path="*" element={<NotFound />} />

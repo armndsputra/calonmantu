@@ -31,26 +31,15 @@ body {
 
 ul li { list-style: none; }
 a { color: #333;text-decoration: none; }
-
-/* 404 NOT FOUND */
-.notFound {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-direction: column;
-    background-color: #f0f0f0;
-    border: 1px solid red !important;
+.divider {
+    /* background-color: gainsboro; */
+    /* padding: 1px; */
+    border-bottom: 1px solid rgba(220, 220, 220, 0.418);
 }
 
-.notFound h1 {
-    font-size: 1rem;
-    color: #333;
-    text-align: center;
-}
-
-.notFound img {
-    width: 100px;
-    height: auto;
-    margin-bottom: 20px;
+/* admin panel */
+.adminContent {
+    /* border: 1px solid blue; */
+    width: auto;
+    padding: 20px;
 }

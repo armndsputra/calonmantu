@@ -5,14 +5,12 @@ import { Outlet } from "react-router-dom";
 import styles from './admin.module.css'
 
 // components
-import Header from '../pages/admin/header.jsx'
-import Sidebar from '../pages/admin/sidebar.jsx'
+import Sidebar from '../pages/admin/components/sidebar'
 
 export default function Admin () {
 
     return(
         <div className={styles.admin}>
-        <Header />
         <Sidebar />
         <main className="adminContent">
             <Outlet />

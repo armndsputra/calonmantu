@@ -1,0 +1,53 @@
+.sidebar {
+    min-height: 100vh;
+    width: 300px;
+    border: 1px solid rgb(191, 191, 191);
+    padding: 10px;
+    color: white;
+    background-color: #087af4;
+}
+
+.sidebarTitle {
+    font-size: 25px;
+    font-weight: 600;
+    position: relative;
+}
+
+.sidebarTitleIcon {
+    position: relative;
+    top: 4px;
+    font-size: 30px;
+}
+
+.sidebarMenu {
+    /* border: 1px solid red; */
+    margin-top: 10px;
+}
+
+.menu {
+    /* border: 1px solid blue; */
+    margin-top: 30px;
+}
+
+.menu ul li {
+    /* border-top: 1px solid rgba(220, 220, 220, 0.211); */
+    padding: 10px 6px;
+    position: relative;
+    font-size: 15px;
+}
+
+.menuIcon {
+    /* border: 1px solid red; */
+    position: relative;
+    top: 2px;
+    margin-right: 6px;
+}
+
+.menu h5 {
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-size: 10px;
+    color: rgba(245, 245, 245, 0.762);
+    padding: 5px;
+    font-weight: 400;
+}
