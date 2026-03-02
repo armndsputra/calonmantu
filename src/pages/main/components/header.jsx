@@ -66,7 +66,8 @@ export default function Header() {
             <div className={styles.webTitle}>
                 <h2>
                     <Link className={styles.webName} to="/">
-                        idhopes
+                        <span>asu</span>
+                        <span>ra</span>
                     </Link>
                 </h2>
             </div>

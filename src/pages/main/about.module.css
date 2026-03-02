@@ -13,7 +13,7 @@
     /* border: 1px solid red; */
     position: absolute;
     top: -260px;
-    background-color: rgba(200, 198, 198, 0.23);
+    background-color: rgba(200, 198, 198, 0.115);
     width: 600px;
     height: 600px;
     z-index: -3;
@@ -49,7 +49,7 @@
 }
 .description h3 {
     /* margin-bottom: 7px; */
-    font-size: 30px;
+    font-size: 35px;
     /* font-family: "Playwrite NZ Basic", cursive; */
     font-weight: 500;
     position: relative;
@@ -114,7 +114,19 @@
     color: rgb(240, 101, 134);
 }
 
-@media screen and (max-width: 600px) {
+/* tablet responsive */
+@media (min-width: 540px) and (max-width: 1040px) {
+    .container {
+        width: 100vw;
+    }
+
+    .description {
+        padding: 25px;
+    }
+}
+
+/* mobile responsive */
+@media screen and (max-width: 540px) {
     .about {
         display: block;
     }

@@ -1,12 +1,11 @@
-
 .navbar {
     display: flex;
     position: relative;
-    background-color: white;
+    background-color: rgb(32, 32, 32);
     position: fixed;
     z-index: 100;
     width: 100vw;
-    border-bottom: 1px solid #c9c3c3;
+    border-bottom: 2px solid #e0dedc;
     top: 0;
     transition: all 0.3s ease;
 }
@@ -17,7 +16,6 @@
     /* border: 1px solid red; */
     transition: all 0.3s ease;
 }
-
 
 /* button menu */
 .buttonMenu {
@@ -49,7 +47,14 @@
     /* text-transform: uppercase; */
     /* font-family: "Playwrite NZ Basic", cursive; */
     color: rgb(44, 44, 44);
-    font-weight: 500;
+    font-weight: 300;
+    text-transform: capitalize;
+    color: #f8efe3d8;
+}
+
+.webName span:first-child {
+    color: #f8f8f8;
+    font-weight: 600;
 }
 
 .webName img {
@@ -58,7 +63,6 @@
     border-radius: 100%;
     position: relative;
     bottom: -4px;
-    
 }
 
 /* main menu */
@@ -69,8 +73,8 @@
     /* margin-top: 15px; */
 }
 .wrapperMenu::-webkit-scrollbar {
-        display: none;
-    }
+    display: none;
+}
 .menu {
     display: flex;
     /* gap: 20px; */
@@ -80,19 +84,20 @@
     position: relative;
     /* height: 40px; */
     margin: 0;
-
 }
 
 /* menu */
 .menuActive {
     /* background-color: rgb(197, 19, 19) !important; */
     /* position: absolute !important; */
-    color: rgb(245, 154, 27) !important;
+    color: rgb(195, 191, 191) !important;
+    /* background-color:   #e0dedc8b !important; */
 }
 
 .datalink {
     text-decoration: none;
-    color: #1f2020;
+    /* color: #1f2020; */
+    color: white;
     font-weight: 400;
     font-size: 14px;
     text-transform: capitalize;
@@ -100,7 +105,7 @@
     border-bottom: 2px solid transparent;
     transition: all 0.3s ease;
     /* letter-spacing: 1px; */
-     /* border-left: 1px solid gainsboro; */
+    /* border-left: 1px solid gainsboro; */
     position: relative;
 }
 
@@ -108,7 +113,7 @@
     /* color: #dc8307; */
     transition: all 0.3s ease;
     /* background-color: #e0e0e0; */
-    background-color: rgba(255, 255, 255, 0.919);
+    /* background-color: #e0dedc8b; */
     /* padding: 4px 10px; */
     /* border-radius: 10px; */
     /* border-bottom: 2px solid #dc8307; */
@@ -120,7 +125,7 @@
     right: 20px;
     top: 20px;
     font-size: 13px;
-    color: #333;
+    color: #e74c3c;
     font-weight: 500;
     /* border: 1px solid red; */
     display: inline-block;
@@ -128,31 +133,41 @@
 
 .datalinkLogin {
     text-decoration: none;
-    color: #5b5b5b;
+    /* color: #5b5b5b; */
     font-weight: 500;
     font-size: 14px;
     margin-right: 10px;
+    color: white;
 }
 
 .datalinkSignup {
     text-decoration: none;
-    color: #353638;
+    color: #212121;
     font-weight: 500;
     font-size: 14px;
-    background-color: #e0e0e0;
-    border-radius: 20px; 
+    background-color: #f5f3f3;
+    border-radius: 20px;
     padding: 5px 10px;
-    border: 1px solid #ccc;
+    /* border: 1px solid #1d1d1d; */
 }
 
+/* teblet responsive */
+@media (min-width: 540px) and (max-width: 1040px) {
+    * {
+        /* border: 1px solid blue; */
+    }
+    .navbar {
+        /* border: 1px solid red; */
+        display: block;
+    }
 
+    .menu {
+        border-top: 1px solid rgba(220, 220, 220, 0.663);
+    }
+}
 
-
-
-
-/* responsive */
-@media screen and (max-width: 600px) {
-
+/* mobile responsive */
+@media screen and (max-width: 540px) {
     .navbar {
         color: rgb(26, 25, 25);
         padding-bottom: 20px;
@@ -164,11 +179,11 @@
         position: fixed;
         min-height: auto;
         /* border: 1px solid red; */
-        min-height: 80px;
+        min-height: 100px;
         z-index: 50;
         /* border: 1px solid red; */
         /* background: transparent; */
-        background-color: white;
+        /* background-color: rgb(226, 13, 13); */
         /* transform-origin: 5s 0; */
         transition: all 0.8s ease !important;
         /* border-bottom: 1px solid red; */
@@ -179,9 +194,9 @@
         display: inline-block;
         position: absolute;
         z-index: 100;
-        right:10px;
+        right: 10px;
         font-size: 25px;
-        color: rgb(52, 50, 50);
+        color: rgb(248, 247, 247);
         cursor: pointer;
         /* background-color: #333; */
         padding: 10px;
@@ -192,10 +207,10 @@
     .webTitle {
         margin-right: 0;
         margin-bottom: 10px;
-        color: rgb(20, 20, 20);
+        /* color: rgb(20, 20, 20); */
         font-size: 16px;
         padding: 10px;
-        border: 1px solid rgb(222, 223, 221);
+        /* border: 1px solid rgb(241, 187, 100); */
     }
 
     .menu {
@@ -206,21 +221,21 @@
         padding: 5px;
         padding-top: 15px;
         padding-bottom: 15px;
-        border-bottom: 1px solid rgb(214, 213, 213);
+        border-bottom: 2px solid #f6f5f4b1;
         /* border-top: 1px solid gainsboro; */
         position: relative;
-        background-color: white;
+        background-color: rgb(25, 25, 25);
         margin: 0;
         height: auto !important;
-
     }
 
     .webName {
-       color: rgb(9, 9, 9);
+        /* color: rgb(9, 9, 9); */
+        /* background-color: red; */
     }
 
     .wrapperMenu {
-        background: none;
+        /* border-bottom: 2px solid blue; */
         width: 100%;
         height: 100vh;
         opacity: 0;
@@ -231,22 +246,24 @@
         position: fixed;
         z-index: 30;
         top: 0;
-    }   
+        background-color: black;
+    }
 
     .active {
         transform: translateX(0) !important;
         opacity: 1 !important;
         position: relative !important;
-        width: 100% ;
+        width: 100%;
         height: 100vh !important;
-        background-color: white !important;
+        /* background-color: white !important; */
     }
 
     .datalink {
         font-size: 14px;
-        color: rgb(32, 31, 31);
+        /* color: rgb(32, 31, 31); */
+        color: white;
         margin-left: 10px;
-        padding: 2px 4px;
+        padding: 4px 8px;
         /* border: 1px solid red; */
         letter-spacing: 0;
     }
@@ -255,7 +272,6 @@
         background-color: transparent;
         border: none;
         color: #dc8307;
-
     }
 
     .accountIdentity {
@@ -263,27 +279,27 @@
         margin: 0;
         display: block;
         border-bottom: none;
-        background-color: white;
+        background-color: rgb(13, 13, 13);
         width: 100%;
         position: relative;
         text-align: right;
         right: 0;
-        top: 0;
+        top: 6px;
         /* border: 1px solid red; */
     }
 
     .accountIdentity::after {
-        content: "";
+        content: '';
         display: block;
         width: 50px;
         height: 2px;
-        background-color: #dc8307;
+        background-color: #f4f2ef;
         margin-top: 15px;
         right: 0;
     }
 
     .datalinkLogin {
-        color: rgb(22, 21, 21);
+        color: #f3f1f0;
         /* border: 1px solid red; */
         margin-top: 6px;
     }

@@ -41,7 +41,14 @@
     width: 100px;
 }
 
-/* responsive */
+/* teblet responsive */
+@media (min-width: 540px) and (max-width: 1040px) {
+    .search {
+        margin-top: 150px;
+    }
+}
+
+/* mobile responsive */
 @media screen and (max-width: 600px) {
     .search {
         padding: 20px;
