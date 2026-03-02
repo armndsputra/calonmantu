@@ -14,15 +14,15 @@ export default function Login() {
                             <input type="email" id="email" name="email" />
                         </div>
                         <div className={styles.formGroup}>
-                            <label htmlFor="password">Password</label>
+                            <label htmlFor="password">Kata Sandi</label>
                             <input type="password" id="password" name="password" />
                         </div>
-                        <button type="submit">Login</button>
+                        <button type="submit">Masuk</button>
                     </form>
                 </div>
                 <div className={styles.footer}>
                     <p>
-                        Don't have an account? <a href="/signup">Register</a>
+                        Apakah kamu belum memiliki akun? <a href="/daftar">Daftar</a>
                     </p>
                 </div>
             </div>

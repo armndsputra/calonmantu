@@ -79,33 +79,21 @@ export default function Header() {
                         className={`${styles.datalink} ${location.pathname === '/' ? styles.menuActive : ''}`}
                         to="/"
                     >
-                        Home
-                    </Link>
-                    <Link
-                        className={`${styles.datalink} ${location.pathname === '/portfolio' ? styles.menuActive : ''}`}
-                        to="/portfolio"
-                    >
-                        Portfolio
+                        artikel
                     </Link>
                     <Link
                         className={`${styles.datalink} ${location.pathname === '/about' ? styles.menuActive : ''}`}
-                        to="/about"
+                        to="/tentang"
                     >
-                        About
-                    </Link>
-                    <Link
-                        className={`${styles.datalink} ${location.pathname === '/category' ? styles.menuActive : ''}`}
-                        to="/category"
-                    >
-                        Category
+                        tentang
                     </Link>
                 </div>
                 <div className={styles.accountIdentity}>
-                    <Link className={styles.datalinkLogin} to="/login">
-                        Log in
+                    <Link className={styles.datalinkLogin} to="/masuk">
+                        Masuk
                     </Link>
-                    <Link className={styles.datalinkSignup} to="/signup">
-                        Sign up
+                    <Link className={styles.datalinkSignup} to="/daftar">
+                        Daftar
                     </Link>
                 </div>
             </div>

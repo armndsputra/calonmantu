@@ -36,10 +36,20 @@ a { color: #333;text-decoration: none; }
     /* padding: 1px; */
     border-bottom: 1px solid rgba(220, 220, 220, 0.418);
 }
+.textLight {
+    color: white;
+}
 
 /* admin panel */
 .adminContent {
     /* border: 1px solid blue; */
-    width: auto;
+    width: 100%;
+    min-height: 100vb;
+    background-color: gainsboro;
     padding: 20px;
+    /* border: 1px solid red; */
+}
+.adminContent .container {
+    /* border: 1px solid red; */
+    min-width: 500px;
 }

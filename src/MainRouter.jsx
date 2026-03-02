@@ -15,6 +15,9 @@ import About from './pages/main/about.jsx'
 import Register from './pages/main/register.jsx'
 import Login from './pages/main/login.jsx'
 
+// admin
+import Article from './pages/admin/articles'
+
 export default function MainRouter() {
     return (
         <Routes>
@@ -22,14 +25,15 @@ export default function MainRouter() {
             <Route element={<MainLayout />}>
                 <Route path="/" element={<Home />} />
                 <Route path="/:id" element={<Detail />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/signup" element={<Register />} />
+                <Route path="/tentang" element={<About />} />
+                <Route path="/masuk" element={<Login />} />
+                <Route path="/daftar" element={<Register />} />
             </Route>
 
             {/* ADMIN ROUTES */}
             <Route path="/admin" element={<AdminLayout />}>
                 <Route index element={<h2>dashboard</h2>} />
+                <Route path="/admin/artikel" element={<Article />} />
             </Route>
 
             <Route path="*" element={<NotFound />} />

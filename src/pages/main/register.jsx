@@ -12,7 +12,7 @@ export default function Register () {
                     <p>Buat akun gratis dan mulai berbagi cerita, ide, serta pengalamanmu bersama komunitas kami.</p>
                     <form action="">
                         <div className={styles.inputGroup}>
-                            <label htmlFor="">Full Name</label>
+                            <label htmlFor="">Nama Lengkap</label>
                             <input type="text" />
                         </div>
                         <div className={styles.inputGroup}>
@@ -21,28 +21,28 @@ export default function Register () {
                         </div>
                         <div className={styles.inputGroup}>
                             <label htmlFor="">Email</label>
+                            <input type="text" placeholder="@mail"/>
+                        </div>
+                        <div className={styles.inputGroup}>
+                            <label htmlFor="">Kata Sandi</label>
                             <input type="text" />
                         </div>
                         <div className={styles.inputGroup}>
-                            <label htmlFor="">Password</label>
-                            <input type="text" />
-                        </div>
-                        <div className={styles.inputGroup}>
-                            <label htmlFor="">Password Confirmation</label>
+                            <label htmlFor="">Konfirmasi Kata Sandi</label>
                             <input type="text" />
                         </div>
                         <div className={styles.genderGroup}>
-                            <label htmlFor="">Gender</label>
+                            <label htmlFor="">Jenis Kelamin</label>
                             <select>
-                                <option value="">Male</option>
-                                <option value="">Famale</option>
+                                <option value="">Laki</option>
+                                <option value="">Perempuan</option>
                             </select>
                         </div>
                         <div className={styles.birthdayGroup}>
-                            <label htmlFor="">Birthday</label>
+                            <label htmlFor="">Tanggal Lahir</label>
                             <input type="date" />
                         </div>
-                        <button>Sign Up</button>
+                        <button>Daftar</button>
                     </form>
                 </div>
             </div>

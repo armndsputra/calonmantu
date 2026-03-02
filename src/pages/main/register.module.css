@@ -3,6 +3,7 @@
     min-height: 100vh;
     position: relative;
     overflow: hidden;
+    background-color: white;
 }
 
 .decoration {
@@ -36,7 +37,7 @@
     font-weight: 500;
     font-size: 35px;
     margin-bottom: 10px;
-    font-family: "Playwrite NZ Basic", cursive;
+    /* font-family: "Playwrite NZ Basic", cursive; */
     position: relative;
 }
 
@@ -67,10 +68,10 @@
 .inputGroup input {
     outline: none;
     border: 1px solid gainsboro;
-    padding: 6px;
+    padding: 8px;
     /* color: gray; */
     font-weight: lighter;
-    font-size: 17px;
+    font-size: 14px;
 }
 
 .genderGroup {
@@ -100,7 +101,7 @@
      margin-top: 20px;
     width: 100%;
     height: 40px;
-    background-color: #007bff;
+    background-color: #29292a;
     color: white;
     border: none;
     cursor: pointer;

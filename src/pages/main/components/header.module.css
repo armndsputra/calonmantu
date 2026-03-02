@@ -99,7 +99,7 @@
     /* color: #1f2020; */
     color: white;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 18px;
     text-transform: capitalize;
     padding: 20px 15px;
     border-bottom: 2px solid transparent;
@@ -129,15 +129,17 @@
     font-weight: 500;
     /* border: 1px solid red; */
     display: inline-block;
+    /* text-transform: capitalize; */
 }
 
 .datalinkLogin {
     text-decoration: none;
     /* color: #5b5b5b; */
     font-weight: 500;
-    font-size: 14px;
+    font-size: 17px;
     margin-right: 10px;
     color: white;
+    text-transform: capitalize;
 }
 
 .datalinkSignup {
