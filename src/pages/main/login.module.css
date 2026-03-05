@@ -66,6 +66,12 @@ form {
     cursor: pointer;
 }
 
+.formInfo {
+    margin: 8px 0;
+    color: red;
+    font-style: italic;
+}
+
 .footer {
     margin-top: 20px;
     text-align: center;

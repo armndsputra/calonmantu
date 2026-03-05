@@ -45,7 +45,7 @@ a { color: #333;text-decoration: none; }
     /* border: 1px solid blue; */
     width: 100%;
     min-height: 100vb;
-    background-color: gainsboro;
+    /* background-color: gainsboro; */
     padding: 20px;
     /* border: 1px solid red; */
 }
