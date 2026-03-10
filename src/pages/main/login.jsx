@@ -41,7 +41,7 @@ export default function Login() {
                         navigate('/admin')
                     })
                     .catch(err => {
-                        console.log(err)
+                        console.log(err.response.data)
                         setErrMessage('Kata sandi atau email salah!')
                     })
             } else {
@@ -49,6 +49,7 @@ export default function Login() {
             }
         } catch (error) {
             console.error(error)
+           
         }
     }
 

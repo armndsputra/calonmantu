@@ -18,6 +18,9 @@ import Login from './pages/main/login.jsx'
 // admin
 import Article from './pages/admin/articles'
 
+// service
+import ProtectedRoute from './services/ProtectedRoute.jsx'
+
 export default function MainRouter() {
     return (
         <Routes>
@@ -31,9 +34,11 @@ export default function MainRouter() {
             </Route>
 
             {/* ADMIN ROUTES */}
-            <Route path="/admin" element={<AdminLayout />}>
-                <Route index element={<h2>dashboard</h2>} />
-                <Route path="/admin/artikel" element={<Article />} />
+            <Route element={<ProtectedRoute />}>
+                <Route path="/admin" element={<AdminLayout />}>
+                    <Route index element={<h2>dashboard</h2>} />
+                    <Route path="artikel" element={<Article />} />
+                </Route>
             </Route>
 
             <Route path="*" element={<NotFound />} />
