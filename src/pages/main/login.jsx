@@ -1,10 +1,25 @@
 import styles from './login.module.css'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
+import { jwtDecode } from 'jwt-decode'
 
 export default function Login() {
-    const [falseData, setFalseData] = useState('')
+    const [errMessage, setErrMessage] = useState('')
     const [form, setForm] = useState({ email: '', password: '' })
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        const currentTime = Date.now() / 1000
+        const token = localStorage.getItem('token')
+        if (token) {
+            const decoded = jwtDecode(token)
+            if (decoded.exp > currentTime) {
+                console.log('token is active')
+                navigate('/admin')
+            }
+        }
+    }, [])
 
     const handleSubmit = async e => {
         e.preventDefault()
@@ -20,13 +35,17 @@ export default function Login() {
                         password: isPassword,
                     })
                     .then(response => {
-                        console.log(response)
+                        // console.log(response.data.data.access_token)
+                        const token = `Bearer ${response.data.data.access_token}`
+                        localStorage.setItem('token', token)
+                        navigate('/admin')
                     })
                     .catch(err => {
                         console.log(err)
-                        setFalseData('Kata Sandi atau Email Salah!')
+                        setErrMessage('Kata sandi atau email salah!')
                     })
             } else {
+                setErrMessage('Data yang anda masukan kurang lengkap!')
             }
         } catch (error) {
             console.error(error)
@@ -65,7 +84,7 @@ export default function Login() {
                     </form>
                 </div>
                 <div className={styles.footer}>
-                    {falseData && <p className={styles.formInfo}>{falseData}</p>}
+                    {errMessage && <p className={styles.formInfo}>{errMessage}</p>}
                     <p>
                         Apakah kamu belum memiliki akun? <a href="/daftar">Daftar</a>
                     </p>
