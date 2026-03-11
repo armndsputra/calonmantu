@@ -10,7 +10,7 @@ export default function ProtectedLogin() {
             const currentTime = Date.now() / 1000
 
             if (decoded.exp > currentTime) {
-                return <Navigate to="/admin" replace />
+                return <Navigate to="/dashboard" replace />
             }
         } catch (err) {
             return <Navigate to="/" replace />

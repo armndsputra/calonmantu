@@ -18,6 +18,7 @@ import Login from '../pages/sites/login.jsx'
 
 // admin
 import Article from '../pages/dashboard/articles.jsx'
+import AddArticle from '../pages/dashboard/tambahartikel.jsx'
 
 // service
 import ProtectedRoute from '../services/protected/ProtectedRoute'
@@ -40,9 +41,10 @@ export default function MainRouter() {
 
             {/* ADMIN ROUTES */}
             <Route element={<ProtectedRoute />}>
-                <Route path="/admin" element={<DashboardLayout />}>
+                <Route path="/dashboard" element={<DashboardLayout />}>
                     <Route index element={<h2>dashboard</h2>} />
                     <Route path="artikel" element={<Article />} />
+                    <Route path="tambahartikel" element={<AddArticle />} />
                 </Route>
             </Route>
 

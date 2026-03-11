@@ -23,9 +23,9 @@ export default function Login() {
                     })
                     .then(response => {
                         // console.log(response.data.data.access_token)
-                        const token = `Bearer ${response.data.data.access_token}`
+                        const token = `${response.data.data.access_token}`
                         localStorage.setItem('token', token)
-                        navigate('/admin')
+                        navigate('/dashboard')
                     })
                     .catch(err => {
                         console.log(err.response.data)

@@ -4,6 +4,7 @@ import { IoMdList } from 'react-icons/io'
 import { MdAdminPanelSettings } from 'react-icons/md'
 import { FaUser } from 'react-icons/fa'
 import { Link, useLocation } from 'react-router-dom'
+import { FaListCheck } from "react-icons/fa6";
 
 import styles from './sidebar.module.css'
 
@@ -20,16 +21,26 @@ export default function Sidebar() {
                     <div className="divider"></div>
                     <ul>
                         <li>
-                            <AiOutlineDashboard className={styles.menuIcon} />
-                            Dashboard
+                            
+                            
+                            <Link className='textLight' to="/dashboard">
+                                <AiOutlineDashboard className={styles.menuIcon} />
+                                Dashboard
+                            </Link>
                         </li>
                     </ul>
                     <div className="divider"></div>
                     <h5>post managements</h5>
                     <ul>
                         <li>
-                            <Link className='textLight' to="/admin/artikel">
+                            <Link className='textLight' to="/dashboard/tambahartikel">
                                 <IoIosCreate className={styles.menuIcon} />
+                                Tambah Artikel
+                            </Link>
+                        </li>
+                        <li>
+                            <Link className='textLight' to="/dashboard/artikel">
+                                <FaListCheck className={styles.menuIcon} />
                                 Artikel
                             </Link>
                         </li>
@@ -37,7 +48,7 @@ export default function Sidebar() {
                     <h5>account managements</h5>
                     <ul>
                         <li>
-                            <Link to="/admin/artikel">
+                            <Link to="/artikel/artikel">
                                 {' '}
                                 <FaUser className={styles.menuIcon} />
                                 Users

@@ -3,8 +3,8 @@
     /* min-width: 1950px; */
     min-height: 100vh;
     background-color: white;
-    border: 1px solid rgba(70, 68, 68, 0.499);
-    padding: 10px;
+    /* border: 1px solid rgba(70, 68, 68, 0.282); */
+    /* padding: 10px; */
 }
 
 h3 {
@@ -25,10 +25,12 @@ h3 {
     font-weight: 500;
     background-color: rgba(220, 220, 220, 0.826);
     margin: 0;
+    /* text-align: left; */
 }
 
 .article table tr td {
-    padding: 10px;
+    /* padding: 10px; */
+    padding: 4px 10px;
     text-align: center;
 }
 
