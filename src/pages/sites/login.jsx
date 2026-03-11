@@ -2,24 +2,11 @@ import styles from './login.module.css'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
-import { jwtDecode } from 'jwt-decode'
 
 export default function Login() {
     const [errMessage, setErrMessage] = useState('')
     const [form, setForm] = useState({ email: '', password: '' })
     const navigate = useNavigate()
-
-    useEffect(() => {
-        const currentTime = Date.now() / 1000
-        const token = localStorage.getItem('token')
-        if (token) {
-            const decoded = jwtDecode(token)
-            if (decoded.exp > currentTime) {
-                console.log('token is active')
-                navigate('/admin')
-            }
-        }
-    }, [])
 
     const handleSubmit = async e => {
         e.preventDefault()

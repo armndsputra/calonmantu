@@ -5,12 +5,12 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 // css
-import styles from './admin.module.css'
+import styles from './dashboard.module.css'
 
 // components
-import Sidebar from '../pages/admin/components/sidebar'
+import Sidebar from '../pages/dashboard/components/sidebar'
 
-export default function Admin() {
+export default function Dashboard() {
     
     return (
         <div className={styles.admin}>

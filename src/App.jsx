@@ -1,6 +1,8 @@
+// npm package manager
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 
-import MainRouter from './MainRouter'
+// To Routes Folder
+import MainRouter from './routes/MainRouter'
 
 function App() {
     return (

@@ -2,14 +2,14 @@
 import { Outlet } from "react-router-dom";
 
 // css
-import styles from './main.module.css'
+import styles from './site.module.css'
 
 // components
-import Header from "../pages/main/components/header";
-import Search from "../pages/main/components/search";
-import Footer from "../pages/main/components/footer";
+import Header from "../pages/sites/components/header";
+import Search from "../pages/sites/components/search";
+import Footer from "../pages/sites/components/footer";
 
-export default function Main() {
+export default function Site() {
 
     return(
         <>
