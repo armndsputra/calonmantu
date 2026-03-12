@@ -32,6 +32,7 @@
     border: 1px solid rgb(218, 218, 224);
     margin-top: 30px;
     padding: 8px;
+    min-height: 300px;
 }
 
 .editorArea label {

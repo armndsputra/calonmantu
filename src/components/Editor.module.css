@@ -1,0 +1,9 @@
+.editor {
+    /* border: 1px solid red; */
+    min-height: 400px;
+}
+
+.editor :global(.ql-container) {
+    height: 300px; /* Tinggi area input */
+    min-height: 300px;
+}
