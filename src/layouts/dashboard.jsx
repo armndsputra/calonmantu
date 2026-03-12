@@ -1,22 +1,19 @@
 // npm package manager
 import { Outlet } from 'react-router-dom'
-import { jwtDecode } from 'jwt-decode'
-import { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
 
 // css
-import styles from './dashboard.module.css'
+import styles from './Dashboard.module.css'
 
 // components
-import Sidebar from '../pages/dashboard/components/sidebar'
+import Sidebar from '../pages/dashboard/components/Sidebar'
 
 export default function Dashboard() {
     
     return (
-        <div className={styles.admin}>
+        <div className={styles.container}>
             <Sidebar />
-            <main className="adminContent">
-                <div className="container">
+            <main className={styles.content}>
+                <div className={styles.core}>
                     <Outlet />
                 </div>
             </main>

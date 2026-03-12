@@ -1,5 +1,5 @@
 // css
-import styles from './register.module.css'
+import styles from './Register.module.css'
 
 export default function Register () {
 

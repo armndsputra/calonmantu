@@ -5,9 +5,9 @@ import { Outlet } from "react-router-dom";
 import styles from './site.module.css'
 
 // components
-import Header from "../pages/sites/components/header";
-import Search from "../pages/sites/components/search";
-import Footer from "../pages/sites/components/footer";
+import Header from "../pages/sites/components/Header";
+import Search from "../pages/sites/components/Search";
+import Footer from "../pages/sites/components/Footer";
 
 export default function Site() {
 

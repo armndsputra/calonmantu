@@ -12,7 +12,7 @@ import { FaShareAlt } from 'react-icons/fa'
 
 import Loading from '../../assets/Loading.gif'
 
-import styles from './detail.module.css'
+import styles from './Detail.module.css'
 
 export default function Detail() {
     const navigate = useNavigate()

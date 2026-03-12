@@ -1,0 +1,39 @@
+.createArtikel {
+    /* border: 1px solid blue ; */
+    /* background-color: red !important; */
+}
+
+.createArtikel h3 {
+    text-transform: capitalize;
+    /* font-size: 17px; */
+     font-weight: 500;
+}
+
+.formArea {
+    margin-top: 20px;
+
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+}
+.formGroup label {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.formGroup input {
+    padding: 7px;
+    outline: none;
+}
+
+.editorArea {
+    border: 1px solid rgb(218, 218, 224);
+    margin-top: 30px;
+    padding: 8px;
+}
+
+.editorArea label {
+font-size: 16px;
+}

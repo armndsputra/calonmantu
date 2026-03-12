@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 
-import styles from './articles.module.css'
+import styles from './Posted.module.css'
 
-export default function Articles() {
+export default function Posted() {
     const [artikel, setArtikel] = useState([])
 
     useEffect(() => {
@@ -24,7 +24,7 @@ export default function Articles() {
             })
     }, [])
 
-    console.log(artikel)
+    // console.log(artikel)
 
     return (
         <div className={styles.article}>

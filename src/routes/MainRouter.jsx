@@ -5,20 +5,20 @@ import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 import '../Main.css'
 
 // layouts
-import SiteLayout from '../layouts/site.jsx'
-import DashboardLayout from '../layouts/dashboard.jsx'
+import SiteLayout from '../layouts/Site.jsx'
+import DashboardLayout from '../layouts/Dashboard.jsx'
 
 // sites pages
-import Home from '../pages/sites/home.jsx'
-import Detail from '../pages/sites/detail.jsx'
+import Home from '../pages/sites/Home.jsx'
+import Detail from '../pages/sites/Detail.jsx'
 import NotFound from '../components/NotFound.jsx'
-import About from '../pages/sites/about.jsx'
-import Register from '../pages/sites/register.jsx'
-import Login from '../pages/sites/login.jsx'
+import About from '../pages/sites/About.jsx'
+import Register from '../pages/sites/Register.jsx'
+import Login from '../pages/sites/Login.jsx'
 
 // admin
-import Article from '../pages/dashboard/articles.jsx'
-import AddArticle from '../pages/dashboard/tambahartikel.jsx'
+import Posted from '../pages/dashboard/Posted.jsx'
+import CreatePost from '../pages/dashboard/CreatePost.jsx'
 
 // service
 import ProtectedRoute from '../services/protected/ProtectedRoute'
@@ -43,8 +43,8 @@ export default function MainRouter() {
             <Route element={<ProtectedRoute />}>
                 <Route path="/dashboard" element={<DashboardLayout />}>
                     <Route index element={<h2>dashboard</h2>} />
-                    <Route path="artikel" element={<Article />} />
-                    <Route path="tambahartikel" element={<AddArticle />} />
+                    <Route path="posted" element={<Posted />} />
+                    <Route path="create-post" element={<CreatePost />} />
                 </Route>
             </Route>
 

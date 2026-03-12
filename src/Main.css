@@ -40,18 +40,3 @@ a { color: #333;text-decoration: none; }
     color: white;
 }
 
-/* backend */
-.adminContent {
-    /* border: 1px solid blue; */
-    width: 100%;
-    min-height: 100vb;
-    /* background-color: gainsboro; */
-    padding: 20px;
-    /* border: 1px solid red; */
-}
-.adminContent .container {
-    border: 1px solid rgba(143, 142, 142, 0.618);
-    min-width: 500px;
-    padding: 15px;
-    min-height: 100%;
-}

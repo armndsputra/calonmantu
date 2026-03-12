@@ -6,7 +6,7 @@ import { FaUser } from 'react-icons/fa'
 import { Link, useLocation } from 'react-router-dom'
 import { FaListCheck } from "react-icons/fa6";
 
-import styles from './sidebar.module.css'
+import styles from './Sidebar.module.css'
 
 export default function Sidebar() {
     return (
@@ -33,13 +33,13 @@ export default function Sidebar() {
                     <h5>post managements</h5>
                     <ul>
                         <li>
-                            <Link className='textLight' to="/dashboard/tambahartikel">
+                            <Link className='textLight' to="/dashboard/create-post">
                                 <IoIosCreate className={styles.menuIcon} />
                                 Tambah Artikel
                             </Link>
                         </li>
                         <li>
-                            <Link className='textLight' to="/dashboard/artikel">
+                            <Link className='textLight' to="/dashboard/posted">
                                 <FaListCheck className={styles.menuIcon} />
                                 Artikel
                             </Link>
