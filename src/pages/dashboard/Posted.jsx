@@ -10,7 +10,7 @@ export default function Posted() {
         const token = localStorage.getItem('token')
         // console.log(token)
         axios
-            .get('https://calonmantu.sbs/api/post/user?limit=2&offset=0', {
+            .get('https://calonmantu.sbs/api/post/user?limit=0&offset=0', {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },

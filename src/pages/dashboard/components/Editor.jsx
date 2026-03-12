@@ -1,17 +1,29 @@
-
+// npm package manager
 import { useState } from 'react'
 import ReactQuill from 'react-quill-new'
-import 'react-quill-new/dist/quill.snow.css' // CSS tetap sama
+import 'react-quill-new/dist/quill.snow.css'
 
+// css
 import Styles from './Editor.module.css'
 
-function Editor() {
+function Editor({ onChange }) {
     const [value, setValue] = useState('')
+
+    const handleChange = content => {
+        // console.log(content.target.value)
+        setValue(content) // update state local
+        onChange(content) // kirim ke parent
+    }
 
     return (
         <div>
-            {/* <h2>Konten</h2> */}
-            <ReactQuill className={Styles.editor} theme="snow" value={value} onChange={setValue} />
+            {/* <input type="text" value={value} onChange={handleChange} /> */}
+            <ReactQuill
+                className={Styles.editor}
+                theme="snow"
+                value={value}
+                onChange={handleChange}
+            />
         </div>
     )
 }
