@@ -25,7 +25,7 @@ export default function CreatePost() {
         })
     }
 
-    const handleContentChange = e => {
+    const handleContentChange = (e) => {
         setFormData({
             ...formData,
             content: e,
@@ -90,7 +90,7 @@ export default function CreatePost() {
                     </div>
 
                     <div className={Styles.editorArea}>
-                        <MyEditor onChange={handleContentChange} />
+                        <MyEditor value={formData.content} onChange={handleContentChange} />
                     </div>
 
                     <div className={Styles.boxInformation}>

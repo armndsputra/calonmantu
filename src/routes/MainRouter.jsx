@@ -1,5 +1,6 @@
 // npm package manager
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
+import { lazy, Suspense } from 'react'
 
 // css
 import '../Main.css'
@@ -17,9 +18,11 @@ import Register from '../pages/sites/Register.jsx'
 import Login from '../pages/sites/Login.jsx'
 
 // dashboard
-import Posted from '../pages/dashboard/Posted.jsx'
+// import Posted from '../pages/dashboard/Posted.jsx'
+const Posted = lazy(() => import('../pages/dashboard/Posted.jsx'))
 import CreatePost from '../pages/dashboard/CreatePost.jsx'
 import DeletePost from '../pages/dashboard/components/DeletePost.jsx'
+import UpdateArtikel from '../pages/dashboard/UpdateArtikel.jsx'
 
 // service
 import ProtectedRoute from '../services/protected/ProtectedRoute'
@@ -27,30 +30,33 @@ import ProtectedLogin from '../services/protected/ProtectedLogin.jsx'
 
 export default function MainRouter() {
     return (
-        <Routes>
-            {/* BLOG ROUTES */}
-            <Route element={<SiteLayout />}>
-                <Route path="/" element={<Home />} />
-                <Route path="/:id" element={<Detail />} />
-                <Route path="/tentang" element={<About />} />
-                {/* login route */}
-                <Route element={<ProtectedLogin />}>
-                    <Route path="/masuk" element={<Login />} />
+        <Suspense fallback={<div>Loading...</div>}>
+            <Routes>
+                {/* BLOG ROUTES */}
+                <Route element={<SiteLayout />}>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/:id" element={<Detail />} />
+                    <Route path="/tentang" element={<About />} />
+                    {/* login route */}
+                    <Route element={<ProtectedLogin />}>
+                        <Route path="/masuk" element={<Login />} />
+                    </Route>
+                    <Route path="/daftar" element={<Register />} />
                 </Route>
-                <Route path="/daftar" element={<Register />} />
-            </Route>
 
-            {/* ADMIN ROUTES */}
-            <Route element={<ProtectedRoute />}>
-                <Route path="/dashboard" element={<DashboardLayout />}>
-                    <Route index element={<h2>dashboard</h2>} />
-                    <Route path="posted" element={<Posted />} />
-                    <Route path="create-post" element={<CreatePost />} />
-                    <Route path="posted/delete/:id" element={<DeletePost />} />
+                {/* ADMIN ROUTES */}
+                <Route element={<ProtectedRoute />}>
+                    <Route path="/dashboard" element={<DashboardLayout />}>
+                        <Route index element={<h2>dashboard</h2>} />
+                        <Route path="posted" element={<Posted />} />
+                        <Route path="create-post" element={<CreatePost />} />
+                         <Route path="posted/update-artikel/:id" element={<UpdateArtikel />} />
+                        <Route path="posted/delete/:id" element={<DeletePost />} />
+                    </Route>
                 </Route>
-            </Route>
 
-            <Route path="*" element={<NotFound />} />
-        </Routes>
+                <Route path="*" element={<NotFound />} />
+            </Routes>
+        </Suspense>
     )
 }
