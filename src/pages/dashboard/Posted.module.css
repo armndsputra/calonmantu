@@ -37,3 +37,16 @@ h3 {
 .article table tr td:nth-child(4) {
     text-transform: capitalize;
 }
+
+.article table tr td:nth-child(2) {
+    /* text-transform: capitalize; */
+    /* color: red; */
+    text-align: left;
+}
+
+.article table tr:nth-child(2n+2) {
+    background-color: #f2f2f2; /* Warna untuk baris ganjil */
+}
+.article table tr:nth-child(2n+1) {
+    /* background-color: #f2f7f6; Warna untuk baris ganjil */
+}

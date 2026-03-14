@@ -2,21 +2,15 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 
 import styles from './Posted.module.css'
+import api from '../../services/api/Api'
 
 export default function Posted() {
     const [artikel, setArtikel] = useState([])
 
     useEffect(() => {
-        const token = localStorage.getItem('token')
-        // console.log(token)
-        axios
-            .get('https://calonmantu.sbs/api/post/user?limit=0&offset=0', {
-                headers: {
-                    Authorization: `Bearer ${token}`,
-                },
-            })
+            api.get('/api/post/user?limit=0&offset=0')
             .then(response => {
-                console.log(response)
+                // console.log(response)
                 setArtikel(response.data.data)
             })
             .catch(err => {

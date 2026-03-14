@@ -1,7 +1,9 @@
 import axios from 'axios'
-
+import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import Styles from './CreatePosts.module.css'
+
+import api from '../../services/api/Api'
 
 import MyEditor from './components/Editor'
 
@@ -11,6 +13,10 @@ export default function CreatePost() {
         content: '',
         thumbnail: null,
     })
+
+     const navigate = useNavigate()
+
+    const [message, setMessage] = useState('')
 
     const handleTitleChange = e => {
         setFormData({
@@ -44,26 +50,28 @@ export default function CreatePost() {
         formDataToSend.append('thumbnail', formData.thumbnail)
 
         // console.log(formDataToSend)
-        for (let pair of formDataToSend.entries()) {
-            console.log(pair[0], pair[1])
-        }
+        // for (let pair of formDataToSend.entries()) {
+        //     console.log(pair[0], pair[1])
+        // }
 
-        const token = localStorage.getItem('token')
-        console.log(token)
-        axios
-            .post('https://calonmantu.sbs/api/post/', formDataToSend, {
+        api
+            .post('/api/post/', formDataToSend, {
                 headers: {
-                    Authorization: `Bearer ${token}`,
                     'Content-Type': 'multipart/form-data',
                 },
             })
             .then(response => {
-                console.log(response)
+                console.log(response.data)
+                navigate('/dashboard/posted')
+                setMessage('Artikel berhasil dibuat')
             })
             .catch(err => {
-                console.error(err)
+                console.log(err.response.data)
+                setMessage('Artikel gagal dibuat')
             })
     }
+
+    console.log(message)
 
     return (
         <div className={Styles.createArtikel}>
@@ -85,9 +93,17 @@ export default function CreatePost() {
                         <MyEditor onChange={handleContentChange} />
                     </div>
 
-                    <button type="submit">post</button>
+                    <div className={Styles.boxInformation}>
+                        <span>
+                            <button className={Styles.btn} type="submit">
+                                post
+                            </button>
+                        </span>
+                        <span>{message && <p>{message}</p>}</span>
+                    </div>
                 </form>
             </div>
+            <div className={Styles.information}></div>
         </div>
     )
 }
