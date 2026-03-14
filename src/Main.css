@@ -40,3 +40,8 @@ a { color: #333;text-decoration: none; }
     color: white;
 }
 
+.quill-content {
+  max-width: 100%;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}

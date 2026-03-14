@@ -16,9 +16,10 @@ import About from '../pages/sites/About.jsx'
 import Register from '../pages/sites/Register.jsx'
 import Login from '../pages/sites/Login.jsx'
 
-// admin
+// dashboard
 import Posted from '../pages/dashboard/Posted.jsx'
 import CreatePost from '../pages/dashboard/CreatePost.jsx'
+import DeletePost from '../pages/dashboard/components/DeletePost.jsx'
 
 // service
 import ProtectedRoute from '../services/protected/ProtectedRoute'
@@ -45,6 +46,7 @@ export default function MainRouter() {
                     <Route index element={<h2>dashboard</h2>} />
                     <Route path="posted" element={<Posted />} />
                     <Route path="create-post" element={<CreatePost />} />
+                    <Route path="posted/delete/:id" element={<DeletePost />} />
                 </Route>
             </Route>
 

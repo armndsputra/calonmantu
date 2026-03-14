@@ -1,9 +1,9 @@
 import { use } from 'react'
-import { useParams } from 'react-router-dom'
+
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 
 // icons
 import { FaAnglesRight } from 'react-icons/fa6'
@@ -107,13 +107,20 @@ export default function Detail() {
                         alt="News Image"
                     />
                 </div>
-                <div className="post-content">
-                    {/* <p>{content?.content || "Loading content..."}</p> */}
-                    <div
+                <div className={styles.postContent}>
+                    {/* <div className={styles.wrapperContent}
                         dangerouslySetInnerHTML={{
                             __html: content?.content || 'Loading content...',
                         }}
+
+                        
+                    /> */}
+
+                    <div
+                        className="quill-content"
+                        dangerouslySetInnerHTML={{ __html: content.content }}
                     />
+
                 </div>
             </div>
             {/* <h1>Detail Page for ID: {id}</h1> */}

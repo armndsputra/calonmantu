@@ -1,10 +1,13 @@
 import { useEffect, useState } from 'react'
-import axios from 'axios'
 
-import styles from './Posted.module.css'
+import { Link } from 'react-router-dom'
+
+import Styles from './Posted.module.css'
 import api from '../../services/api/Api'
+import { MdDelete } from "react-icons/md";
 
 export default function Posted() {
+    
     const [artikel, setArtikel] = useState([])
 
     useEffect(() => {
@@ -21,9 +24,9 @@ export default function Posted() {
     // console.log(artikel)
 
     return (
-        <div className={styles.article}>
+        <div className={Styles.article}>
             <h3>Daftar Artikel</h3>
-            <div className={styles.tableGroup}>
+            <div className={Styles.tableGroup}>
                 <table>
                     <thead>
                         <tr>
@@ -40,7 +43,11 @@ export default function Posted() {
                                 <td>{index + 1}</td>
                                 <td>{data.title}</td>
                                 <td>{data.id}</td>
-                                <td></td>
+                                <td className={Styles.action}>
+                                <Link className={Styles.delete} to={`delete/${data.id}`}>
+                                <MdDelete />
+                            </Link>
+                                </td>
                             </tr>
                         ))}
                     </tbody>
