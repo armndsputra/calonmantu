@@ -1,13 +1,13 @@
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
-import Styles from './CreatePosts.module.css'
+import Styles from './PostArtikel.module.css'
 
 import api from '../../services/api/Api'
 
 import MyEditor from './components/Editor'
 
-export default function CreatePost() {
+export default function PostArtikel() {
     const [formData, setFormData] = useState({
         title: '',
         content: '',
@@ -62,7 +62,7 @@ export default function CreatePost() {
             })
             .then(response => {
                 console.log(response.data)
-                navigate('/dashboard/posted')
+                navigate('/dashboard/artikel')
                 setMessage('Artikel berhasil dibuat')
             })
             .catch(err => {

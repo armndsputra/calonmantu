@@ -1,13 +1,19 @@
+// npm package manager
 import { useEffect, useState } from 'react'
-
 import { Link } from 'react-router-dom'
 
-import Styles from './Posted.module.css'
+// css
+import Styles from './ManagerArtikel.module.css'
+
+// services
 import api from '../../services/api/Api'
+
+// icons
 import { MdDelete } from 'react-icons/md'
 import { FaRegEdit } from "react-icons/fa";
 
-export default function Posted() {
+export default function ManagerArtikel() {
+
     const [artikel, setArtikel] = useState([])
 
     useEffect(() => {
@@ -17,11 +23,10 @@ export default function Posted() {
                 setArtikel(response.data.data)
             })
             .catch(err => {
-                console.log(err)
+                console.error(err)
+                console.error(err.response)
             })
     }, [])
-
-    // console.log(artikel)
 
     return (
         <div className={Styles.article}>
@@ -44,7 +49,7 @@ export default function Posted() {
                                 <td>{data.title}</td>
                                 <td>{data.id}</td>
                                 <td className={Styles.action}>
-                                    <Link className={Styles.delete} to={`delete/${data.id}`}>
+                                    <Link className={Styles.delete} to={`delete-artikel/${data.id}`}>
                                         <MdDelete />
                                     </Link>
                                     <Link className={Styles.edit} to={`update-artikel/${data.id}`}>

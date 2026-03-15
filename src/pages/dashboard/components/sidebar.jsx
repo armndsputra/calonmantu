@@ -33,13 +33,13 @@ export default function Sidebar() {
                     <h5>post managements</h5>
                     <ul>
                         <li>
-                            <Link className='textLight' to="/dashboard/create-post">
+                            <Link className='textLight' to="/dashboard/post-artikel">
                                 <IoIosCreate className={styles.menuIcon} />
                                 Tambah Artikel
                             </Link>
                         </li>
                         <li>
-                            <Link className='textLight' to="/dashboard/posted">
+                            <Link className='textLight' to="/dashboard/artikel">
                                 <FaListCheck className={styles.menuIcon} />
                                 Artikel
                             </Link>

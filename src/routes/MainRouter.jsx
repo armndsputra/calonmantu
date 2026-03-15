@@ -19,9 +19,9 @@ import Login from '../pages/sites/Login.jsx'
 
 // dashboard
 // import Posted from '../pages/dashboard/Posted.jsx'
-const Posted = lazy(() => import('../pages/dashboard/Posted.jsx'))
-import CreatePost from '../pages/dashboard/CreatePost.jsx'
-import DeletePost from '../pages/dashboard/components/DeletePost.jsx'
+const ManagerArtikel = lazy(() => import('../pages/dashboard/ManagerArtikel.jsx'))
+import PostArtikel from '../pages/dashboard/PostArtikel.jsx'
+import DeleteArtikel from '../pages/dashboard/components/DeleteArtikel.jsx'
 import UpdateArtikel from '../pages/dashboard/UpdateArtikel.jsx'
 
 // service
@@ -48,10 +48,10 @@ export default function MainRouter() {
                 <Route element={<ProtectedRoute />}>
                     <Route path="/dashboard" element={<DashboardLayout />}>
                         <Route index element={<h2>dashboard</h2>} />
-                        <Route path="posted" element={<Posted />} />
-                        <Route path="create-post" element={<CreatePost />} />
-                         <Route path="posted/update-artikel/:id" element={<UpdateArtikel />} />
-                        <Route path="posted/delete/:id" element={<DeletePost />} />
+                        <Route path="artikel" element={<ManagerArtikel />} />
+                        <Route path="post-artikel" element={<PostArtikel />} />
+                        <Route path="artikel/update-artikel/:id" element={<UpdateArtikel />} />
+                        <Route path="artikel/delete-artikel/:id" element={<DeleteArtikel />} />
                     </Route>
                 </Route>
 
