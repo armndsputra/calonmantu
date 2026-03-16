@@ -1,7 +1,7 @@
 // npm packages
 import { Link, useLocation } from 'react-router-dom'
 
-import styles from './header.module.css'
+import styles from './Header.module.css'
 
 // icons
 import { FaBars } from 'react-icons/fa6'
@@ -83,7 +83,7 @@ export default function Header() {
                     </Link>
                     <Link
                         className={`${styles.datalink} ${location.pathname === '/about' ? styles.menuActive : ''}`}
-                        to="/tentang"
+                        to="/about"
                     >
                         tentang
                     </Link>

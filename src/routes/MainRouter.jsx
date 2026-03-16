@@ -36,7 +36,7 @@ export default function MainRouter() {
                 <Route element={<SiteLayout />}>
                     <Route path="/" element={<Home />} />
                     <Route path="/:id" element={<Detail />} />
-                    <Route path="/tentang" element={<About />} />
+                    <Route path="/about" element={<About />} />
                     {/* login route */}
                     <Route element={<ProtectedLogin />}>
                         <Route path="/masuk" element={<Login />} />

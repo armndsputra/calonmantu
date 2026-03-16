@@ -1,11 +1,8 @@
 .about {
     margin: auto;
     position: relative;
-    /* padding: 0; */
-    /* border: 1px solid blue; */
     min-height: 100vh;
     padding-top: 50px;
-    /* background-color: rgba(52, 53, 53, 0.205); */
     overflow: hidden;
 }
 
@@ -20,7 +17,7 @@
     transform: rotate(50deg);
 }
 
-.container {
+.wrapperAbout {
     width: 1000px;
     margin: auto;
     /* border: 1px solid red; */
@@ -36,7 +33,6 @@
     padding-left: 10px;
 }
 .description h1 {
-    /* border: 1px solid red; */
     font-size: 45px;
     text-transform: capitalize;
     text-align: left;
@@ -48,7 +44,7 @@
     margin-left: 20px;
 }
 .description h3 {
-    /* margin-bottom: 7px; */
+    margin-bottom: 20px;
     font-size: 45px;
     /* font-family: "Playwrite NZ Basic", cursive; */
     font-weight: 500;
@@ -126,7 +122,7 @@
 
 /* tablet responsive */
 @media (min-width: 540px) and (max-width: 1040px) {
-    .container {
+    .wrapperAbout {
         width: 100vw;
     }
 
@@ -147,9 +143,10 @@
 @media screen and (max-width: 540px) {
     .about {
         display: block;
+        padding-top: 15px;
     }
 
-    .container {
+    .wrapperAbout {
         width: 100%;
         display: block;
         padding: 0;
@@ -167,10 +164,14 @@
     .description {
         padding: 10px;
         text-align: center;
+        /* margin-top: 10px; */
+        /* border: 1px solid red; */
     }
 
     .description h3 {
         font-size: 25px;
+        margin-top: 0;
+        /* border: 1px solid red; */
     }
 
     .description h1 {

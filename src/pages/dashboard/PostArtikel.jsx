@@ -1,10 +1,14 @@
-import axios from 'axios'
+// npm package manager
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
+
+// css
 import Styles from './PostArtikel.module.css'
 
+// services
 import api from '../../services/api/Api'
 
+// components
 import MyEditor from './components/Editor'
 
 export default function PostArtikel() {
@@ -14,7 +18,7 @@ export default function PostArtikel() {
         thumbnail: null,
     })
 
-     const navigate = useNavigate()
+    const navigate = useNavigate()
 
     const [message, setMessage] = useState('')
 
@@ -25,7 +29,7 @@ export default function PostArtikel() {
         })
     }
 
-    const handleContentChange = (e) => {
+    const handleContentChange = e => {
         setFormData({
             ...formData,
             content: e,
@@ -38,7 +42,6 @@ export default function PostArtikel() {
             ...formData,
             thumbnail: file,
         })
-        // console.log(file)
     }
 
     const handleSubmit = async e => {
@@ -49,24 +52,23 @@ export default function PostArtikel() {
         formDataToSend.append('content', formData.content)
         formDataToSend.append('thumbnail', formData.thumbnail)
 
-        // console.log(formDataToSend)
         // for (let pair of formDataToSend.entries()) {
         //     console.log(pair[0], pair[1])
         // }
 
-        api
-            .post('/api/post/', formDataToSend, {
-                headers: {
-                    'Content-Type': 'multipart/form-data',
-                },
-            })
+        api.post('/api/post/', formDataToSend, {
+            headers: {
+                'Content-Type': 'multipart/form-data',
+            },
+        })
             .then(response => {
                 console.log(response.data)
                 navigate('/dashboard/artikel')
                 setMessage('Artikel berhasil dibuat')
             })
             .catch(err => {
-                console.log(err.response.data)
+                console.error(err.response)
+                console.error(err)
                 setMessage('Artikel gagal dibuat')
             })
     }
