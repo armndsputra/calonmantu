@@ -7,7 +7,7 @@
     position: relative;
     /* border: 1px solid red; */
 }
-.container {
+.wrapperDetail {
     padding: 30px;
     width: 75%;
     border-right: 1px solid #ccc;
@@ -126,8 +126,9 @@ h1 {
     color: #333;
 }
 
-/* responsive mobile */
-@media (max-width: 768px) {
+/* mobile responsive */
+@media screen and (max-width: 540px) {
+    
     .detail {
         /* flex-direction: column; */
         display: block;
@@ -136,7 +137,7 @@ h1 {
         /* margin: 0; */
         /* border: 1px solid red; */
     }
-    .container {
+    .wrapperDetail {
         width: 100%;
         border-right: none;
         padding: 4px;
@@ -144,7 +145,7 @@ h1 {
     }
 
     .detail h1 {
-        font-size: 24px;
+        font-size: 20px;
         margin-top: 50px;
     }
 

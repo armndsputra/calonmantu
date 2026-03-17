@@ -9,6 +9,7 @@
     min-height: 100vb;
     /* background-color: gainsboro; */
     padding: 20px;
+   
 }
 
 .core {
@@ -16,4 +17,26 @@
     min-width: 500px;
     padding: 15px;
     min-height: 100%;
+}
+
+/* mobile responsive */
+@media screen and (max-width: 540px) {
+
+    .container {
+        display: block;
+        min-height: 100vh;
+    }
+
+    .content {
+         margin-top: 70px;
+         width: 100%;
+         padding: 0;
+         height: 100%;
+    }
+
+    .core {
+        width: 100%;
+        height: 100%;
+    }
+
 }

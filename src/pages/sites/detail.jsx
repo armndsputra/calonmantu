@@ -1,7 +1,5 @@
-import { use } from 'react'
-
+// npm package manager
 import { useEffect, useState } from 'react'
-import axios from 'axios'
 import { Link } from 'react-router-dom'
 import { useNavigate, useParams } from 'react-router-dom'
 
@@ -9,29 +7,32 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { FaAnglesRight } from 'react-icons/fa6'
 import { FaSquareFacebook } from 'react-icons/fa6'
 import { FaShareAlt } from 'react-icons/fa'
-
 import Loading from '../../assets/Loading.gif'
 
+// css
 import styles from './Detail.module.css'
+
+// services
+import Api from '../../services/api/Api'
 
 export default function Detail() {
     const navigate = useNavigate()
     const id = useParams().id
 
-    const [content, setContent] = useState(null)
+    const [data, setData] = useState(null) // Data Artikel
     const [error, setError] = useState(null)
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
         // fetch data from API by ID
-        axios
-            .get('https://calonmantu.sbs/api/post/' + id)
+        Api
+            .get('/api/post/' + id)
             .then(response => {
-                setContent(response.data.data)
+                setData(response.data.data)
                 setLoading(false)
             })
             .catch(error => {
-                console.error('Error fetching content:', error)
+                console.error('Error fetching data:', error)
                 setError(error)
             })
     }, [])
@@ -49,7 +50,7 @@ export default function Detail() {
 
     return (
         <div className={styles.detail}>
-            <div className={styles.container}>
+            <div className={styles.wrapperDetail}>
                 <div className={styles.breadcrumb}>
                     <ul>
                         <li>
@@ -60,27 +61,23 @@ export default function Detail() {
                         <li className={styles.separator}>
                             <FaAnglesRight className="color-dark" />
                         </li>
-                        {/* <li>{content?.author?. || "Unknown Author"}</li> */}
-                        {/* <li className="separator"><FaAnglesRight className="color-dark" /></li> */}
-                        <li>{content?.title || 'Loading...'}</li>
+
+                        <li>{data?.title || 'Loading...'}</li>
                     </ul>
                 </div>
 
-                <h1 className="">{content?.title || 'Loading...'}</h1>
+                <h1 className="">{data?.title || 'Loading...'}</h1>
                 <div className={styles.postData}>
                     <p className="post-author">
                         by{' '}
                         <span className="font-500 text-capitalizer">
-                            {content?.author?.name || 'Unknown Author'}
+                            {data?.author?.name || 'Unknown Author'}
                         </span>
                     </p>{' '}
-                    |
-                    <p className="post-date">
-                        {content?.createdAt?.split('T')[0] || 'Unknown Date'}
-                    </p>{' '}
+                    |<p className="post-date">{data?.createdAt?.split('T')[0] || 'Unknown Date'}</p>{' '}
                     |
                     <p className="post-category">
-                        Category: {content?.category?.name || 'Uncategorized'}
+                        Category: {data?.category?.name || 'Uncategorized'}
                     </p>
                 </div>
                 <div className={styles.postThumbnail}>
@@ -103,24 +100,15 @@ export default function Detail() {
                     </div>
 
                     <img
-                        src={`https://calonmantu.sbs/${content?.thumbnail.replace(/^\/?public\/?/i, '')}`}
-                        alt="News Image"
+                        src={`https://calonmantu.sbs/${data?.thumbnail.replace(/^\/?public\/?/i, '')}`}
+                        alt=""
                     />
                 </div>
                 <div className={styles.postContent}>
-                    {/* <div className={styles.wrapperContent}
-                        dangerouslySetInnerHTML={{
-                            __html: content?.content || 'Loading content...',
-                        }}
-
-                        
-                    /> */}
-
                     <div
-                        className="quill-content"
-                        dangerouslySetInnerHTML={{ __html: content.content }}
+                        className="quill-data"
+                        dangerouslySetInnerHTML={{ __html: data.content }}
                     />
-
                 </div>
             </div>
             {/* <h1>Detail Page for ID: {id}</h1> */}
