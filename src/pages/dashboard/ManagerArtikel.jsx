@@ -3,17 +3,16 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 // css
-import Styles from './ManagerArtikel.module.css'
+import styles from './ManagerArtikel.module.css'
 
 // services
 import api from '../../services/api/Api'
 
 // icons
 import { MdDelete } from 'react-icons/md'
-import { FaRegEdit } from "react-icons/fa";
+import { FaRegEdit } from 'react-icons/fa'
 
 export default function ManagerArtikel() {
-
     const [artikel, setArtikel] = useState([])
 
     useEffect(() => {
@@ -29,17 +28,16 @@ export default function ManagerArtikel() {
     }, [])
 
     return (
-        <div className={Styles.article}>
+        <div className={styles.artikelListWrapper}>
             <h3>Daftar Artikel</h3>
-            <div className={Styles.tableGroup}>
+
+            <div className={styles.tableGroup}> 
                 <table>
                     <thead>
                         <tr>
                             <th>no</th>
-                            <th>title</th>
-                            <th>ID</th>
-
-                            <th>action</th>
+                            <th>judul artikel</th>
+                            <th>aksi</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -47,12 +45,11 @@ export default function ManagerArtikel() {
                             <tr key={data.id}>
                                 <td>{index + 1}</td>
                                 <td>{data.title}</td>
-                                <td>{data.id}</td>
-                                <td className={Styles.action}>
-                                    <Link className={Styles.delete} to={`delete-artikel/${data.id}`}>
+                                <td className={styles.aksi}>
+                                    <Link className={styles.delete} to={`delete-artikel/${data.id}`}>
                                         <MdDelete />
                                     </Link>
-                                    <Link className={Styles.edit} to={`update-artikel/${data.id}`}>
+                                    <Link className={styles.edit} to={`update-artikel/${data.id}`}>
                                         <FaRegEdit />
 
                                     </Link>
@@ -62,6 +59,7 @@ export default function ManagerArtikel() {
                     </tbody>
                 </table>
             </div>
+               
         </div>
     )
 }

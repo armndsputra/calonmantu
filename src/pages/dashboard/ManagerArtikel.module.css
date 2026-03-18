@@ -1,17 +1,13 @@
-.article {
-    /* border: 1px solid red; */
-    /* min-width: 1950px; */
+.artikelListWrapper {
     min-height: 100vh;
     background-color: white;
-    /* border: 1px solid rgba(70, 68, 68, 0.282); */
-    /* padding: 10px; */
 }
 
 h3 {
     font-weight: 500;
 }
 
-.article table {
+table {
     border: 1px solid rgba(162, 160, 160, 0.501);
     margin-top: 20px;
     /* box-sizing: border-box; */
@@ -19,7 +15,7 @@ h3 {
     min-width: 100%;
     font-size: 14px;
 }
-.article table tr th {
+table tr th {
     padding: 10px;
     text-transform: capitalize;
     font-weight: 500;
@@ -28,33 +24,33 @@ h3 {
     /* text-align: left; */
 }
 
-.article table tr td {
+table tr td {
     /* padding: 10px; */
     padding: 4px 10px;
     text-align: center;
 }
 
-.article table tr td:nth-child(4) {
+table tr td:nth-child(4) {
     text-transform: capitalize;
 }
 
-.article table tr td:nth-child(2) {
-    /* text-transform: capitalize; */
-    /* color: red; */
+table tr td:nth-child(2) {
     text-align: left;
 }
 
-.article table tr:nth-child(2n+2) {
-    background-color: #f2f2f2; /* Warna untuk baris ganjil */
-}
-.article table tr:nth-child(2n+1) {
-    /* background-color: #f2f7f6; Warna untuk baris ganjil */
+table tr td:nth-child(3) {
 }
 
-.action {
+table tr:nth-child(2n + 2) {
+    background-color: #f2f2f2; /* Warna untuk baris ganjil */
+}
+
+.aksi {
     display: flex;
     gap: 10px;
     font-size: 23px;
+    justify-content: center;
+    justify-items: center;
 }
 
 .delete {
@@ -65,4 +61,38 @@ h3 {
 .edit {
     color: rgb(107, 160, 26);
     /* font-size: 16px; */
+}
+
+.table {
+    border: 1px solid rgb(197, 194, 194);
+}
+
+.tr {
+    display: flex;
+    gap: 10px;
+}
+
+/* mobile responsive */
+@media screen and (max-width: 540px) {
+
+    .artikelListWrapper {
+        /* display: none; */
+    }
+
+    .tableGroup {
+        /* border: 1px solid red; */
+        width: 350px;
+        padding: 10px;
+        position: relative;
+    }
+
+   table {
+    width: 100%;
+   }
+
+    table tr td:nth-child(2) {
+        text-align: left;
+        /* width: 200px; */
+        /* word-break: break-word; */
+    }
 }

@@ -13,8 +13,7 @@
 }
 
 .core {
-    border: 1px solid rgba(143, 142, 142, 0.618);
-    min-width: 500px;
+    /* border: 1px solid rgba(242, 14, 14, 0.89); */
     padding: 15px;
     min-height: 100%;
 }
@@ -23,20 +22,29 @@
 @media screen and (max-width: 540px) {
 
     .container {
-        display: block;
+        display: inline-block;
         min-height: 100vh;
+        width: 100%;
+        gap: 0;
+        /* border: 1px solid #ff007b; */
+        /* background-color: #ff007b; */
     }
 
     .content {
          margin-top: 70px;
          width: 100%;
          padding: 0;
-         height: 100%;
+         min-height: 100vh;
+         /* border: 1px solid rgb(9, 246, 88); */
+         position: relative;
+         /* background-color: red; */
     }
 
     .core {
-        width: 100%;
+        /* width: 100%; */
         height: 100%;
+        border: 1px solid rgb(229, 233, 229);
+        padding: 10px;
     }
 
 }
