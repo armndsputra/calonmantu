@@ -10,22 +10,20 @@ h3 {
 table {
     border: 1px solid rgba(162, 160, 160, 0.501);
     margin-top: 20px;
-    /* box-sizing: border-box; */
     border-collapse: collapse;
     min-width: 100%;
     font-size: 14px;
 }
+
 table tr th {
     padding: 10px;
     text-transform: capitalize;
     font-weight: 500;
     background-color: rgba(220, 220, 220, 0.826);
     margin: 0;
-    /* text-align: left; */
 }
 
 table tr td {
-    /* padding: 10px; */
     padding: 4px 10px;
     text-align: center;
 }
@@ -36,9 +34,6 @@ table tr td:nth-child(4) {
 
 table tr td:nth-child(2) {
     text-align: left;
-}
-
-table tr td:nth-child(3) {
 }
 
 table tr:nth-child(2n + 2) {
@@ -55,44 +50,24 @@ table tr:nth-child(2n + 2) {
 
 .delete {
     color: red;
-    /* font-size: 16px; */
 }
 
 .edit {
     color: rgb(107, 160, 26);
-    /* font-size: 16px; */
-}
-
-.table {
-    border: 1px solid rgb(197, 194, 194);
-}
-
-.tr {
-    display: flex;
-    gap: 10px;
 }
 
 /* mobile responsive */
 @media screen and (max-width: 540px) {
-
-    .artikelListWrapper {
-        /* display: none; */
-    }
-
     .tableGroup {
-        /* border: 1px solid red; */
-        width: 350px;
         padding: 10px;
         position: relative;
     }
 
-   table {
-    width: 100%;
-   }
+    table {
+        width: 100%;
+    }
 
     table tr td:nth-child(2) {
         text-align: left;
-        /* width: 200px; */
-        /* word-break: break-word; */
     }
 }

@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: "Mona Sans", sans-serif;
+    font-family: 'Mona Sans', sans-serif;
     color: #333;
 }
 
@@ -29,8 +29,13 @@ body {
 }
 /* end */
 
-ul li { list-style: none; }
-a { color: #333;text-decoration: none; }
+ul li {
+    list-style: none;
+}
+a {
+    color: #333;
+    text-decoration: none;
+}
 .divider {
     /* background-color: gainsboro; */
     /* padding: 1px; */
@@ -40,8 +45,8 @@ a { color: #333;text-decoration: none; }
     color: white;
 }
 
-.quill-content {
-  max-width: 100%;
-  word-break: break-word;
-  overflow-wrap: break-word;
+.quill-data {
+    max-width: 100%;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }

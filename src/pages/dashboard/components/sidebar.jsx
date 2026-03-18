@@ -8,6 +8,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { FaListCheck } from 'react-icons/fa6'
 import { FaBars } from 'react-icons/fa6'
 import { IoClose } from 'react-icons/io5'
+import { TbWorldWww } from "react-icons/tb";
 
 import styles from './Sidebar.module.css'
 import { useState, useEffect } from 'react'
@@ -48,6 +49,12 @@ export default function Sidebar() {
                                 <Link className="textLight" to="/dashboard">
                                     <AiOutlineDashboard className={styles.menuIcon} />
                                     Dashboard
+                                </Link>
+                            </li>
+                            <li>
+                                <Link className="textLight" to="/">
+                                    <TbWorldWww className={styles.menuIcon} />
+                                    www.asura.com
                                 </Link>
                             </li>
                         </ul>

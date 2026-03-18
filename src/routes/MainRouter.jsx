@@ -39,9 +39,9 @@ export default function MainRouter() {
                     <Route path="/about" element={<About />} />
                     {/* login route */}
                     <Route element={<ProtectedLogin />}>
-                        <Route path="/masuk" element={<Login />} />
+                        <Route path="/login" element={<Login />} />
                     </Route>
-                    <Route path="/daftar" element={<Register />} />
+                    <Route path="/register" element={<Register />} />
                 </Route>
 
                 {/* ADMIN ROUTES */}

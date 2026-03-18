@@ -1,93 +1,50 @@
 .createArtikel {
-    /* border: 1px solid blue ; */
-    /* background-color: red !important; */
+    /* border: 1px solid red; */
 }
 
 .createArtikel h3 {
     text-transform: capitalize;
-    /* font-size: 17px; */
-     font-weight: 500;
-}
-
-.formArea {
-    margin-top: 20px;
-
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin: 10px;
 }
 
 .formGroup {
     display: flex;
     flex-direction: column;
-}
-.formGroup label {
     margin-bottom: 10px;
-    font-size: 16px;
+    gap: 6px;
+}
+
+.formGroup:nth-child(1) input {
+    border: none;
 }
 
 .formGroup input {
+    font-size: 14px;
     padding: 7px;
     outline: none;
+    border: 1px solid gainsboro;
 }
 
-.editorArea {
-    border: 1px solid rgb(218, 218, 224);
-    margin-top: 30px;
-    padding: 8px;
-    min-height: 300px;
-}
-
-.editorArea label {
-font-size: 16px;
-}
-
-.btn  {
-    border: none;
-    margin-top: 20px;
-    padding: 10px;
-    font-size: 12px;
-    text-align: center;
-    width: 100px;
-    background-color: rgb(31, 31, 31);
-    color: white;
-    cursor: pointer;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.information {
+.button {
     margin-top: 10px;
-    margin-bottom: 10px;
-    padding-left: 20px;
-    font-size: 15px;
-    font-style: italic;
-    color: rgb(51, 51, 243);
+    padding: 10px 15px;
+    font-size: 12px;
+    text-transform: uppercase;
+    background-color: black;
+    color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
 }
 
-.flashMessage {
-    /* border: 1px solid red; */
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 50;
-    /* background-color: rgba(64, 59, 59, 0.268); */
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.boxInformation {
-    /* border: 1px solid red; */
+.cardNotif {
     display: flex;
 }
 
-.boxInformation span:nth-child(2) {
-    /* border: 1px solid blue; */
-    text-align: center;
-    margin-left: 20px;
-    padding: 20px;
-    color: rgba(0, 0, 255, 0.656);
-    font-size: 17px;
-    font-style: italic;
+.cardNotif span:nth-child(2) {
+    padding: 16px;
+    color: rgb(47, 158, 255);
 }

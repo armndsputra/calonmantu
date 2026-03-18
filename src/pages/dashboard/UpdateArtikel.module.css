@@ -1,0 +1,50 @@
+.updateArtikel {
+    /* border: 1px solid red; */
+}
+
+.updateArtikel h3 {
+    text-transform: capitalize;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin: 10px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    gap: 6px;
+}
+
+.formGroup:nth-child(1) input {
+    border: none;
+}
+
+.formGroup input {
+    font-size: 14px;
+    padding: 7px;
+    outline: none;
+    border: 1px solid gainsboro;
+}
+
+.button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    font-size: 12px;
+    text-transform: uppercase;
+    background-color: black;
+    color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.cardNotif {
+    display: flex;
+}
+
+.cardNotif span:nth-child(2) {
+    padding: 16px;
+    color: rgb(47, 158, 255);
+}

@@ -3,18 +3,16 @@ import MyEditor from './components/Editor'
 import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import api from '../../services/api/Api'
-import axios from 'axios'
 
 const UpdateArtikel = () => {
+
+    const [message, setMessage] = useState([])
     const [data, setData] = useState({
         title: '',
         content: '',
         thumbnail: null,
     })
     const id = useParams().id
-
-    // console.log(id)
-    // console.log(data)
 
     useEffect(() => {
         api.get('/api/post/' + id)
@@ -58,14 +56,14 @@ const UpdateArtikel = () => {
     const handleSubmit = e => {
         e.preventDefault()
         const formDataToSend = new FormData()
-        
+
         formDataToSend.append('title', data.title)
         formDataToSend.append('content', data.content)
         formDataToSend.append('thumbnail', data.thumbnail)
 
         console.log(data)
         // console.log(formDataToSend)
-         for (let pair of formDataToSend.entries()) {
+        for (let pair of formDataToSend.entries()) {
             console.log(pair[0], pair[1])
         }
 
@@ -77,23 +75,25 @@ const UpdateArtikel = () => {
             .then(response => {
                 console.log('Update successful:', response.data)
                 // Handle success (show message, redirect, etc.)
+                setMessage('Artikel Berhasil Dirubah')
             })
             .catch(err => {
                 console.error('Update failed:', err.response)
                 // Handle error (show error message)
+                setMessage('Artikel Gagal Dirubah')
             })
     }
 
+
     return (
-        <div className={styles.UpdateArtikel}>
-            <h3>edit artikel</h3>
+        <div className={styles.updateArtikel}>
+            <h3>Ubah artikel</h3>
 
             <div className={styles.formArea}>
                 <form onSubmit={handleSubmit}>
                     <div className={styles.formGroup}>
                         <label>Thumbnail</label>
                         <input type="file" onChange={handleFileChange} />
-                        {/* <input type="file" /> */}
                     </div>
 
                     <div className={styles.formGroup}>
@@ -105,13 +105,15 @@ const UpdateArtikel = () => {
                         <MyEditor value={data.content} onChange={handleContentChange} />
                     </div>
 
-                    <div className={styles.boxInformation}>
+                    <div className={styles.cardNotif}>
                         <span>
-                            <button className={styles.btn} type="submit">
-                                post
+                            <button className={styles.button} type="submit">
+                                Ubah
                             </button>
                         </span>
-                        {/* <span>{message && <p>{message}</p>}</span> */}
+                        <span>
+                            {message && <p>{message}</p>}
+                        </span>
                     </div>
                 </form>
             </div>

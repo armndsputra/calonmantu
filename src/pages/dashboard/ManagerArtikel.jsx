@@ -31,7 +31,7 @@ export default function ManagerArtikel() {
         <div className={styles.artikelListWrapper}>
             <h3>Daftar Artikel</h3>
 
-            <div className={styles.tableGroup}> 
+            <div className={styles.tableGroup}>
                 <table>
                     <thead>
                         <tr>
@@ -46,12 +46,14 @@ export default function ManagerArtikel() {
                                 <td>{index + 1}</td>
                                 <td>{data.title}</td>
                                 <td className={styles.aksi}>
-                                    <Link className={styles.delete} to={`delete-artikel/${data.id}`}>
+                                    <Link
+                                        className={styles.delete}
+                                        to={`delete-artikel/${data.id}`}
+                                    >
                                         <MdDelete />
                                     </Link>
                                     <Link className={styles.edit} to={`update-artikel/${data.id}`}>
                                         <FaRegEdit />
-
                                     </Link>
                                 </td>
                             </tr>
@@ -59,7 +61,6 @@ export default function ManagerArtikel() {
                     </tbody>
                 </table>
             </div>
-               
         </div>
     )
 }

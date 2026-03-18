@@ -95,10 +95,10 @@ export default function PostArtikel() {
                         <MyEditor value={formData.content} onChange={handleContentChange} />
                     </div>
 
-                    <div className={Styles.boxInformation}>
+                    <div className={Styles.cardNotif}>
                         <span>
-                            <button className={Styles.btn} type="submit">
-                                post
+                            <button className={Styles.button} type="submit">
+                                Tambah
                             </button>
                         </span>
                         <span>{message && <p>{message}</p>}</span>

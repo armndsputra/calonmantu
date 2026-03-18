@@ -89,10 +89,10 @@ export default function Header() {
                     </Link>
                 </div>
                 <div className={styles.accountIdentity}>
-                    <Link className={styles.datalinkLogin} to="/masuk">
+                    <Link className={styles.datalinkLogin} to="/login">
                         Masuk
                     </Link>
-                    <Link className={styles.datalinkSignup} to="/daftar">
+                    <Link className={styles.datalinkSignup} to="/register">
                         Daftar
                     </Link>
                 </div>
