@@ -25,8 +25,7 @@ export default function Detail() {
 
     useEffect(() => {
         // fetch data from API by ID
-        Api
-            .get('/api/post/' + id)
+        Api.get('/api/post/' + id)
             .then(response => {
                 setData(response.data.data)
                 setLoading(false)
@@ -106,7 +105,7 @@ export default function Detail() {
                 </div>
                 <div className={styles.postContent}>
                     <div
-                        className="quill-data"
+                        className="quill-content"
                         dangerouslySetInnerHTML={{ __html: data.content }}
                     />
                 </div>

@@ -45,8 +45,18 @@ a {
     color: white;
 }
 
-.quill-data {
-    max-width: 100%;
+
+.quill-content {
+    width: 100%;
     word-break: break-word;
     overflow-wrap: break-word;
+    white-space: normal;
+    justify-content: center;
+   white-space: pre-wrap; 
+}
+
+.quill-content p {
+    margin-bottom: 12px;
+    position: relative;
+    
 }

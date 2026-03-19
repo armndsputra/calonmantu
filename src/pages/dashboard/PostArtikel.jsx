@@ -30,6 +30,8 @@ export default function PostArtikel() {
     }
 
     const handleContentChange = e => {
+
+        
         setFormData({
             ...formData,
             content: e,
@@ -46,15 +48,19 @@ export default function PostArtikel() {
 
     const handleSubmit = async e => {
         e.preventDefault()
+        const cleanContent = formData.content.replace(/&nbsp;/g, " ")
+        console.log(cleanContent)
+        // return
         const formDataToSend = new FormData()
 
         formDataToSend.append('title', formData.title)
-        formDataToSend.append('content', formData.content)
+        formDataToSend.append('content', cleanContent)
         formDataToSend.append('thumbnail', formData.thumbnail)
 
         // for (let pair of formDataToSend.entries()) {
         //     console.log(pair[0], pair[1])
         // }
+
 
         api.post('/api/post/', formDataToSend, {
             headers: {
