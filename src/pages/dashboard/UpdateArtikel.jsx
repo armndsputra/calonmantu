@@ -55,10 +55,14 @@ const UpdateArtikel = () => {
     // submit
     const handleSubmit = e => {
         e.preventDefault()
+         const cleanContent = data.content.replace(/&nbsp;/g, " ")
+        console.log(cleanContent)
+
+        // return
         const formDataToSend = new FormData()
 
         formDataToSend.append('title', data.title)
-        formDataToSend.append('content', data.content)
+        formDataToSend.append('content', cleanContent)
         formDataToSend.append('thumbnail', data.thumbnail)
 
         console.log(data)

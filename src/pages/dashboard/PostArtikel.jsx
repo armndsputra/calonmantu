@@ -49,7 +49,7 @@ export default function PostArtikel() {
     const handleSubmit = async e => {
         e.preventDefault()
         const cleanContent = formData.content.replace(/&nbsp;/g, " ")
-        console.log(cleanContent)
+        // console.log(cleanContent)
         // return
         const formDataToSend = new FormData()
 
