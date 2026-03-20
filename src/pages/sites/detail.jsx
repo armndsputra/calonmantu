@@ -17,15 +17,11 @@ import styles from './Detail.module.css'
 import Api from '../../services/api/Api'
 
 // shareBotton
-const ShareBotton = ({ id, title }) => {
-    const baseUrl = 'https://calonmantu.sbs'
-    const articleUrl = `${baseUrl}/detail/${id}`
-    // const encodedUrl = encodeURIComponent(articleUrl)
-    // const encodedTitle = encodeURIComponent(title)
+const ShareBotton = ({ id , title}) => {
+    const url = `https://calonmantu.sbs/${id}`
 
     const shareLinks = {
-        // facebook: `https://www.facebook.com/sharer/sharer.php?u=${baseUrl}&quote=${id}`,
-        facebook: `https://www.facebook.com/sharer/sharer.php?u=https://calonmantu.sbs/detail/${id}`
+        facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
     }
 
     const handleShare = (platform, url) => {
