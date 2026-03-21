@@ -94,9 +94,7 @@ export default function Detail() {
                 <meta name="description" content="" />
                 <meta property="og:title" content="Judul Konten Anda" />
                 <meta property="og:description" content="Deskripsi singkat" />
-                <meta property="og:image" content="https://calonmantu.sbs/thumbnail.jpg" />
-                <meta property="og:url" content="https://calonmantu.sbs/69bc0915b49a615d80d78e8b" />
-                <meta property="og:type" content="website" />
+               
             </Helmet>
             <div className={styles.detail}>
                 <div className={styles.wrapperDetail}>
